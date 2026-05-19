@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BrailleDecoder } from "@/components/BrailleDecoder";
+import { MotionToggle } from "@/components/MotionToggle";
 import { IG_URL, SHOPEE_URL, WHATSAPP_URL, WHOLESALE_EMAIL } from "@/lib/links";
 
 /**
@@ -67,6 +68,9 @@ export function Footer() {
             <p className="text-whim">Sensu · センス</p>
             <p>Japanese-inspired drinkware, made for the modern hand.</p>
             <p>© 2025 Sensu · All rights reserved. Made in Indonesia.</p>
+            <div className="mt-3">
+              <MotionToggle />
+            </div>
           </div>
 
           {/* Small Braille reading "sensu" */}

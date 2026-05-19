@@ -38,7 +38,9 @@ body {
   }
 }
 
-/* Reduced motion: kill animation, allow fades */
+/* Reduced motion: kill animation, allow fades.
+   The same rule fires when the user opts in via the footer MotionToggle
+   (which sets data-motion="paused" on <html>). */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -48,6 +50,15 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+html[data-motion="paused"] *,
+html[data-motion="paused"] *::before,
+html[data-motion="paused"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
 }
 
 /* Skip link */

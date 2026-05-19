@@ -4,11 +4,13 @@ import type { Metadata } from "next";
 import { Echo } from "@/components/motifs";
 import { RITUAL_STEPS } from "@/content/ritual";
 import { SHOPEE_URL, WHATSAPP_URL } from "@/lib/links";
+import { breadcrumbJsonLd, howToMatchaJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "How to whisk matcha, the Sensu way",
   description:
     "A good cup of matcha is not difficult — it is patient. Our four-step ritual, with the tools we make.",
+  alternates: { canonical: "/ritual" },
 };
 
 /**
@@ -19,6 +21,23 @@ export const metadata: Metadata = {
  * the page reads with a quiet zigzag rhythm.
  */
 export default function RitualPage() {
+  return (
+    <>
+      <script {...jsonLdScript(howToMatchaJsonLd())} />
+      <script
+        {...jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Sensu", href: "/" },
+            { name: "Ritual", href: "/ritual" },
+          ])
+        )}
+      />
+      <RitualPageBody />
+    </>
+  );
+}
+
+function RitualPageBody() {
   return (
     <main id="main" className="overflow-x-hidden">
       {/* HERO */}

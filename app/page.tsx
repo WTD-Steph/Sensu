@@ -6,6 +6,7 @@ import { Featured } from "@/components/sections/Featured";
 import { RitualTeaser } from "@/components/sections/RitualTeaser";
 import { SensuCircle } from "@/components/sections/SensuCircle";
 import { Newsletter } from "@/components/sections/Newsletter";
+import { featuredProductsJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 /**
  * Home one-pager — composed of section components.
@@ -16,15 +17,18 @@ import { Newsletter } from "@/components/sections/Newsletter";
  */
 export default function HomePage() {
   return (
-    <main id="main" className="overflow-x-hidden">
-      <Hero />
-      <Story />
-      <BrailleReveal />
-      <Collections />
-      <Featured />
-      <RitualTeaser />
-      <SensuCircle />
-      <Newsletter />
-    </main>
+    <>
+      <script {...jsonLdScript(featuredProductsJsonLd())} />
+      <main id="main" className="overflow-x-hidden">
+        <Hero />
+        <Story />
+        <BrailleReveal />
+        <Collections />
+        <Featured />
+        <RitualTeaser />
+        <SensuCircle />
+        <Newsletter />
+      </main>
+    </>
   );
 }

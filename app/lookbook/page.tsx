@@ -1,10 +1,12 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Lookbook",
   description:
     "A visual showcase of Sensu — quiet pieces in their own light.",
+  alternates: { canonical: "/lookbook" },
 };
 
 /**
@@ -69,6 +71,22 @@ const SPAN_CLASSES: Record<NonNullable<(typeof TILES)[number]["span"]>, string> 
 };
 
 export default function LookbookPage() {
+  return (
+    <>
+      <script
+        {...jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Sensu", href: "/" },
+            { name: "Lookbook", href: "/lookbook" },
+          ])
+        )}
+      />
+      <LookbookBody />
+    </>
+  );
+}
+
+function LookbookBody() {
   return (
     <main id="main" className="overflow-x-hidden">
       {/* HERO */}

@@ -6,6 +6,7 @@ import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { jsonLdScript, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import "./globals.css";
 
 // Latin display + body — Chakra Petch (brand book: same family for headlines and body)
@@ -51,6 +52,19 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo/sensu-mark-dark.svg",
   },
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export const viewport: Viewport = {
@@ -64,6 +78,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${chakra.variable} ${notoJp.variable}`}>
+      <head>
+        {/* JSON-LD: Organization + WebSite — applies site-wide */}
+        <script {...jsonLdScript(organizationJsonLd())} />
+        <script {...jsonLdScript(websiteJsonLd())} />
+      </head>
       <body>
         <SmoothScrollProvider>
           <a href="#main" className="skip-link">

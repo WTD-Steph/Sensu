@@ -4,11 +4,13 @@ import type { Metadata } from "next";
 import { BrailleDecoder } from "@/components/BrailleDecoder";
 import { Orbit, Loop } from "@/components/motifs";
 import { SHOPEE_URL } from "@/lib/links";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Our story",
   description:
     "Sensu was born from a quiet question: what does it mean to do something well? Our name means sense. Our wordmark is written in Braille.",
+  alternates: { canonical: "/story" },
 };
 
 /**
@@ -25,6 +27,22 @@ export const metadata: Metadata = {
  *   6. Closing CTA pair → Shopee + back home.
  */
 export default function StoryPage() {
+  return (
+    <>
+      <script
+        {...jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Sensu", href: "/" },
+            { name: "Our story", href: "/story" },
+          ])
+        )}
+      />
+      <StoryBody />
+    </>
+  );
+}
+
+function StoryBody() {
   return (
     <main id="main" className="overflow-x-hidden">
       {/* HERO */}

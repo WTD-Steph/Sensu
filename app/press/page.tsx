@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Orbit } from "@/components/motifs";
 import { WHOLESALE_EMAIL } from "@/lib/links";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Press kit",
   description:
     "Sensu press kit — logos, brand book, fact sheet, and a place to reach us.",
+  alternates: { canonical: "/press" },
 };
 
 /* eslint-disable @next/next/no-img-element */
@@ -42,6 +44,22 @@ const ASSETS = [
 ];
 
 export default function PressPage() {
+  return (
+    <>
+      <script
+        {...jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Sensu", href: "/" },
+            { name: "Press kit", href: "/press" },
+          ])
+        )}
+      />
+      <PressBody />
+    </>
+  );
+}
+
+function PressBody() {
   return (
     <main id="main" className="overflow-x-hidden">
       {/* HERO */}
