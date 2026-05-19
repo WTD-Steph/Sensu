@@ -4,7 +4,7 @@
  *
  * Validates against https://search.google.com/test/rich-results.
  */
-import { PRODUCTS, formatIDR, type Product } from "@/content/products";
+import { PRODUCTS, type Product } from "@/content/products";
 import { RITUAL_STEPS } from "@/content/ritual";
 import { IG_URL, SITE_NAME, SITE_TAGLINE, SITE_URL, WHOLESALE_EMAIL } from "./links";
 
@@ -53,8 +53,8 @@ function productJsonLd(p: Product) {
     brand: { "@type": "Brand", name: SITE_NAME },
     offers: {
       "@type": "Offer",
-      priceCurrency: "IDR",
-      price: p.priceIDR,
+      priceCurrency: "USD",
+      price: p.priceUSD,
       availability: "https://schema.org/InStock",
       url: p.shopeeUrl ?? SITE_URL,
     },
@@ -125,5 +125,3 @@ export function jsonLdScript(data: object) {
   };
 }
 
-/** Tiny helper kept for readability — formats an IDR price for the offers. */
-export const _formatIDR = formatIDR;

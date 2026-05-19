@@ -1,9 +1,11 @@
 /**
  * Sensu featured products. Sourced from the rebuild brief §1.
  *
- * Pricing is in IDR. When in doubt about a product detail, the entry
- * is flagged `placeholder: true` and uses a placeholder image — see the
- * brief's "Do not invent product names or prices" rule.
+ * Pricing is displayed in USD (rough conversion from the brand book's
+ * IDR figures at ~16k IDR/USD, rounded to clean dollars). When in doubt
+ * about a product detail the entry is flagged `placeholder: true` and
+ * uses a placeholder image — see the brief's "Do not invent product
+ * names or prices" rule.
  */
 import type { CollectionId } from "./collections";
 
@@ -15,8 +17,8 @@ export type Product = {
   blurb: string;
   /** Material/short detail line. */
   detail: string;
-  /** Price in IDR rupiah, integer. */
-  priceIDR: number;
+  /** Price in USD whole dollars. */
+  priceUSD: number;
   /** Public image path under /public — square crop preferred. */
   image: string;
   /** Per-product Shopee URL if the founder has confirmed it; falls back to global SHOPEE_URL otherwise. */
@@ -33,7 +35,7 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     collection: "hikari",
     blurb: "A clear glass cup that lets the colour and ritual of your drink shine.",
     detail: "Clear glass · handblown",
-    priceIDR: 260_000,
+    priceUSD: 17,
     image: "/img/products/hikari-cup.jpg",
   },
   {
@@ -42,7 +44,7 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     collection: "oboro",
     blurb: "A soft white-glazed ceramic cup. Warm in hand, fit for espresso or matcha.",
     detail: "Ceramic · white glaze",
-    priceIDR: 260_000,
+    priceUSD: 17,
     image: "/img/products/oboro-senchawan.jpg",
   },
   {
@@ -51,7 +53,7 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     collection: "take",
     blurb: "Chasen, chawan, and matcha — everything you need to begin the ritual.",
     detail: "Chasen + chawan + matcha",
-    priceIDR: 320_000,
+    priceUSD: 20,
     image: "/img/social/bundle.jpg",
   },
   // Mentioned in the brief — image not yet supplied, so flagged as placeholder
@@ -61,7 +63,7 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     collection: "hikari",
     blurb: "A handblown glass kettle with a minimal, fluted spout.",
     detail: "Glass · handblown",
-    priceIDR: 320_000,
+    priceUSD: 20,
     image: "/img/products/hikari-cup.jpg",
     placeholder: true,
   },
@@ -71,7 +73,7 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     collection: "oboro",
     blurb: "A ceramic tea bowl shaped by hand, fired in muted clay tones.",
     detail: "Ceramic · muted clay",
-    priceIDR: 210_000,
+    priceUSD: 14,
     image: "/img/products/oboro-senchawan.jpg",
     placeholder: true,
   },
@@ -81,7 +83,7 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     collection: "oboro",
     blurb: "A shallow ceramic tray with a raw edge and subtle glaze.",
     detail: "Ceramic · raw edge",
-    priceIDR: 150_000,
+    priceUSD: 10,
     image: "/img/social/tools-tray.jpg",
     placeholder: true,
   },
@@ -91,7 +93,7 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     collection: "take",
     blurb: "Crafted from fine bamboo for smooth, frothy matcha. Daily-ready.",
     detail: "Bamboo · whisk",
-    priceIDR: 120_000,
+    priceUSD: 8,
     image: "/img/social/bundle.jpg",
     placeholder: true,
   },
@@ -101,13 +103,13 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     collection: "takumi",
     blurb: "A premium editorial set, mixing materials with intention.",
     detail: "Mixed materials · premium",
-    priceIDR: 720_000,
+    priceUSD: 45,
     image: "/img/social/bts-tray.jpg",
     placeholder: true,
   },
 ];
 
-/** Format an IDR price for display, e.g. "IDR 260.000". */
-export function formatIDR(amount: number): string {
-  return `IDR ${amount.toLocaleString("id-ID")}`;
+/** Format a USD price for display, e.g. "$17". */
+export function formatUSD(amount: number): string {
+  return `$${amount.toLocaleString("en-US")}`;
 }

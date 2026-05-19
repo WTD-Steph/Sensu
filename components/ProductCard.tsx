@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { formatIDR, type Product } from "@/content/products";
+import { formatUSD, type Product } from "@/content/products";
 import { COLLECTIONS } from "@/content/collections";
 import { SHOPEE_URL } from "@/lib/links";
 
@@ -67,7 +67,7 @@ export function ProductCard({ product }: { product: Product }) {
         <p className="mt-1 text-body text-void/70">{product.blurb}</p>
         <p className="mt-1 text-sm text-void/70">{product.detail}</p>
         <p className="mt-3 font-semibold tracking-wider text-void">
-          {formatIDR(product.priceIDR)}
+          {formatUSD(product.priceUSD)}
         </p>
       </div>
     </article>
