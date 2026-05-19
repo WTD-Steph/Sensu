@@ -54,13 +54,13 @@ export function ProductCard({ product }: { product: Product }) {
 
       <div className="flex flex-1 flex-col gap-1.5 p-6">
         <span
-          className={`text-caption font-bold uppercase tracking-eyebrow ${COLLECTION_TINT[product.collection]}`}
+          className={`text-[14px] font-bold uppercase tracking-eyebrow ${COLLECTION_TINT[product.collection]}`}
         >
           {c?.name ?? product.collection}
         </span>
         <h3 className="text-h3 font-bold leading-tight">{product.name}</h3>
         <p className="mt-1 text-body text-void/70">{product.blurb}</p>
-        <p className="mt-1 text-sm text-void/55">{product.detail}</p>
+        <p className="mt-1 text-sm text-void/70">{product.detail}</p>
         <p className="mt-3 font-semibold tracking-wider text-void">
           {formatIDR(product.priceIDR)}
         </p>

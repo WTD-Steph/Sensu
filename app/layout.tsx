@@ -9,7 +9,9 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { jsonLdScript, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
 import "./globals.css";
 
-// Latin display + body — Chakra Petch (brand book: same family for headlines and body)
+// Latin display + body — Chakra Petch (brand book: same family for headlines and body).
+// Weights all used: 300 (italic em), 400 (body), 500 (CTAs, nav), 600 (eyebrows,
+// prices), 700 (headings).
 const chakra = Chakra_Petch({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -18,12 +20,14 @@ const chakra = Chakra_Petch({
   display: "swap",
 });
 
-// Japanese kanji fallback for the kanji collection labels (光 朧 竹 匠)
+// Japanese kanji fallback for the kanji collection labels (光 朧 竹 匠).
+// preload: false because it's only used below the fold on collection cards.
 const notoJp = Noto_Serif_JP({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["700"],
   variable: "--font-noto-jp",
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {

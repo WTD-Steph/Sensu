@@ -58,9 +58,12 @@ export function Nav() {
     >
       <div className="mx-auto flex h-[72px] max-w-page items-center gap-7 px-gutter">
         <Link href="/" aria-label="Sensu home" className="shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/logo/sensu-logotype-dark.svg"
             alt="Sensu"
+            width={120}
+            height={26}
             className="h-[26px] w-auto"
           />
         </Link>

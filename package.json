@@ -2,6 +2,12 @@
   "name": "sensu",
   "version": "0.1.0",
   "private": true,
+  "browserslist": [
+    "chrome >= 90",
+    "edge >= 90",
+    "firefox >= 90",
+    "safari >= 14"
+  ],
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",

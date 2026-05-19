@@ -131,6 +131,8 @@ function PressBody() {
                     src={a.href}
                     alt=""
                     aria-hidden="true"
+                    width={120}
+                    height={48}
                     className={
                       a.href.includes("light")
                         ? "h-12 w-auto invert-0 brightness-50"
