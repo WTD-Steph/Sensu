@@ -58,7 +58,11 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* Account for the 72px sticky header so anchor targets aren't hidden under it */
+  scroll-padding-top: 88px;
+}
 
 html, body { margin: 0; padding: 0; }
 
