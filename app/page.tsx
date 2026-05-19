@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { Hero } from "@/components/sections/Hero";
+import { Story } from "@/components/sections/Story";
 import { BrailleReveal } from "@/components/sections/BrailleReveal";
+import { Collections } from "@/components/sections/Collections";
 import { IG_URL } from "@/lib/links";
 
 /**
@@ -14,46 +15,9 @@ export default function HomePage() {
   return (
     <main id="main" className="overflow-x-hidden">
       <Hero />
-
-      {/* STORY — placeholder anchor. Phase 2b rebuilds this. */}
-      <section id="story" className="py-section">
-        <div className="mx-auto max-w-page px-gutter">
-          <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
-            About the brand
-          </p>
-          <h2 className="mb-8 text-h2 font-bold">
-            A quiet confidence in{" "}
-            <em className="font-light italic text-marble">what feels right.</em>
-          </h2>
-          <p className="max-w-[58ch] text-body-lg text-void/70">
-            In Japanese, <strong>Sensu (センス)</strong> means taste, intuition,
-            or refined sense. At Sensu, we honour the timeless rituals of
-            Japanese culture through contemporary tools crafted for the modern
-            hand. Every bowl, cup and whisk we offer is designed with purpose —
-            to bring stillness, clarity, and beauty into your daily ritual.
-          </p>
-        </div>
-      </section>
-
-      {/* BRAILLE REVEAL — the brand's signature moment */}
+      <Story />
       <BrailleReveal />
-
-      {/* COLLECTIONS — placeholder anchor. Phase 2b rebuilds this. */}
-      <section id="collections" className="py-section">
-        <div className="mx-auto max-w-page px-gutter">
-          <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
-            Collections
-          </p>
-          <h2 className="mb-12 text-h2 font-bold">
-            Form follows{" "}
-            <em className="font-light italic text-marble">function.</em>
-          </h2>
-          <p className="max-w-[58ch] text-body-lg text-void/70">
-            Phase 2b rebuilds this section with motif-per-card visuals and
-            deep-dive product views.
-          </p>
-        </div>
-      </section>
+      <Collections />
 
       {/* FEATURED — placeholder. Phase 2c rebuilds this. */}
       <section id="products" className="py-section bg-whim">
