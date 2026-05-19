@@ -1,6 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Chakra_Petch, Noto_Serif_JP } from "next/font/google";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/links";
+import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
+import { AnnouncementBar } from "@/components/AnnouncementBar";
+import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import "./globals.css";
 
 // Latin display + body — Chakra Petch (brand book: same family for headlines and body)
@@ -60,10 +65,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${chakra.variable} ${notoJp.variable}`}>
       <body>
-        <a href="#main" className="skip-link">
-          Skip to content
-        </a>
-        {children}
+        <SmoothScrollProvider>
+          <a href="#main" className="skip-link">
+            Skip to content
+          </a>
+          <AnnouncementBar />
+          <Nav />
+          {children}
+          <Footer />
+          <WhatsAppButton />
+        </SmoothScrollProvider>
       </body>
     </html>
   );
