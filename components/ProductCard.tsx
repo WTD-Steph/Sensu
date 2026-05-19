@@ -7,11 +7,14 @@ const COLLECTION_BY_ID = Object.fromEntries(
   COLLECTIONS.map((c) => [c.id, c])
 );
 
-const COLLECTION_TINT: Record<Product["collection"], string> = {
-  hikari: "text-flare",
-  oboro: "text-marble",
-  take: "text-void",
-  takumi: "text-marble",
+// Colour identity for each collection chip. Rendered as a 9px dot
+// next to the (always-Void) text — keeps the brand colour cue without
+// running into AA contrast issues that text-flare on Whim has.
+const COLLECTION_DOT: Record<Product["collection"], string> = {
+  hikari: "bg-flare",
+  oboro: "bg-marble",
+  take: "bg-void",
+  takumi: "bg-marble",
 };
 
 /**
@@ -53,9 +56,11 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
 
       <div className="flex flex-1 flex-col gap-1.5 p-6">
-        <span
-          className={`text-[14px] font-bold uppercase tracking-eyebrow ${COLLECTION_TINT[product.collection]}`}
-        >
+        <span className="inline-flex items-center gap-2 text-[14px] font-bold uppercase tracking-eyebrow text-void">
+          <span
+            aria-hidden="true"
+            className={`inline-block h-2 w-2 rounded-full ${COLLECTION_DOT[product.collection]}`}
+          />
           {c?.name ?? product.collection}
         </span>
         <h3 className="text-h3 font-bold leading-tight">{product.name}</h3>
