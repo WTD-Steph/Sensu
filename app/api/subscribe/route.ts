@@ -3,12 +3,11 @@ import { type NextRequest, NextResponse } from "next/server";
 /**
  * Newsletter subscribe — stub.
  *
- * For now this just validates the payload, logs the subscription
- * (server-side), and returns 200. Phase 4 wires it to a real provider.
+ * Validates the payload, logs the opt-in (server-side), returns 200.
  *
  * TODO(provider): swap the stub for ConvertKit / Mailchimp / Resend
- * Audiences. The shape of the payload should stay the same so the
- * client form doesn't need to change.
+ * Audiences. The request shape should stay { email, name? } so the
+ * <Newsletter /> form doesn't need to change.
  */
 export async function POST(request: NextRequest) {
   let body: { email?: string; name?: string };
@@ -32,9 +31,8 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // TODO(provider): actually subscribe the email.
-  // For now, log so the founder can see opt-ins in Vercel logs during
-  // soft-launch.
+  // TODO(provider): replace the console.log with a real subscribe call.
+  // During soft-launch the opt-ins land in Vercel function logs.
   console.log(`[subscribe] new opt-in: ${email}${name ? ` (${name})` : ""}`);
 
   return NextResponse.json({ ok: true });
