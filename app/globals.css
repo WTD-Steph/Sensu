@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Sensu brand tokens — see tailwind.config.ts for the canonical scale */
+  --marble: #2b2bad;
+  --flare: #e21b1b;
+  --lumen: #faeb3a;
+  --zesty: #fa6000;
+  --void: #161514;
+  --whim: #f2f1f0;
+  --whim-warm: #e8e5e0;
+
+  --ease-sensu: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Account for the sticky header (72-88px) so anchor targets aren't hidden under it */
+  scroll-padding-top: 88px;
+}
+
+body {
+  background: var(--whim);
+  color: var(--void);
+  font-family: var(--font-chakra), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Focus rings — 2px Marble at 2px offset for every interactive element */
+@layer base {
+  :where(a, button, [role="button"], input, select, textarea, summary):focus-visible {
+    outline: 2px solid var(--marble);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* Reduced motion: kill animation, allow fades */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--void);
+  color: var(--whim);
+  padding: 10px 14px;
+  border-radius: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+}
