@@ -1,0 +1,35 @@
+{
+  "_comment": "Static cache of @madebysensu posts. Refresh by pasting Meta oEmbed responses into `posts` — see scripts/refresh-instagram.ts.",
+  "posts": [
+    {
+      "permalink": "https://instagram.com/madebysensu",
+      "image": "/img/social/bts-clay.jpg",
+      "alt": "Behind the scenes — hands shaping clay"
+    },
+    {
+      "permalink": "https://instagram.com/madebysensu",
+      "image": "/img/social/matcha-ritual.jpg",
+      "alt": "Matcha being whisked in a ceramic bowl"
+    },
+    {
+      "permalink": "https://instagram.com/madebysensu",
+      "image": "/img/social/bts-tray.jpg",
+      "alt": "Tea preparation tray with iron kettle and bamboo whisk"
+    },
+    {
+      "permalink": "https://instagram.com/madebysensu",
+      "image": "/img/social/tools-tray.jpg",
+      "alt": "Tools laid out on a wooden tray"
+    },
+    {
+      "permalink": "https://instagram.com/madebysensu",
+      "image": "/img/products/hikari-cup.jpg",
+      "alt": "Hikari clear glass cup"
+    },
+    {
+      "permalink": "https://instagram.com/madebysensu",
+      "image": "/img/social/bundle.jpg",
+      "alt": "Bundle tea set"
+    }
+  ]
+}
