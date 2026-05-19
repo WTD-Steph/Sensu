@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const FACTS = [
   { label: "Founded", value: "2025" },
-  { label: "Based", value: "Jakarta, Indonesia" },
+  { label: "Categories", value: "Drinkware · Tea tools · Tableware" },
   { label: "Material lines", value: "4 — Hikari · Oboro · Take · Takumi" },
   { label: "Pieces in line", value: "30+ handcrafted" },
 ];

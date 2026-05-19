@@ -1,9 +1,9 @@
 /**
  * Sensu featured products. Sourced from the rebuild brief §1.
  *
- * Pricing is in IDR (Indonesian Rupiah). When in doubt about a product
- * detail, the entry is flagged `placeholder: true` and uses a placeholder
- * image — see the brief's "Do not invent product names or prices" rule.
+ * Pricing is in IDR. When in doubt about a product detail, the entry
+ * is flagged `placeholder: true` and uses a placeholder image — see the
+ * brief's "Do not invent product names or prices" rule.
  */
 import type { CollectionId } from "./collections";
 

@@ -173,7 +173,7 @@ function StoryBody() {
       <section className="py-section">
         <div className="mx-auto max-w-3xl px-gutter">
           <p className="text-body-lg text-void/65">
-            — The Sensu team. Jakarta, Indonesia.
+            — The Sensu team.
           </p>
         </div>
       </section>

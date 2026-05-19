@@ -46,7 +46,7 @@ export function AnnouncementBar() {
           rel="noopener noreferrer"
           className="flex-1 text-center uppercase hover:underline"
         >
-          Sensu × Shopee — now shipping across Indonesia. Tap to shop →
+          Sensu × Shopee — the store is open. Tap to shop →
         </a>
         <button
           type="button"

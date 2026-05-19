@@ -67,7 +67,7 @@ export function Footer() {
           <div>
             <p className="text-whim">Sensu · センス</p>
             <p>Japanese-inspired drinkware, made for the modern hand.</p>
-            <p>© 2025 Sensu · All rights reserved. Made in Indonesia.</p>
+            <p>© 2025 Sensu · All rights reserved.</p>
             <div className="mt-3">
               <MotionToggle />
             </div>

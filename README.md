@@ -2,8 +2,8 @@
 
 > Rituals worth keeping.
 
-The Sensu brand showcase site — a contemporary Indonesian drinkware and
-tea-tools brand inspired by Japanese rituals. Founded by The Daily.
+The Sensu brand showcase site — a contemporary drinkware and tea-tools
+brand inspired by the quiet beauty of Japanese rituals.
 
 Live at https://sensu-jp.vercel.app.
 
