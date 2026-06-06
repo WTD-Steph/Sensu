@@ -22,7 +22,7 @@ export const IG_URL = "https://instagram.com/madebysensu";
 // TODO(wholesale-email): confirm the public-facing inbox.
 export const WHOLESALE_EMAIL = "hello@madebysensu.com";
 
-export const SITE_URL = "https://sensu-jp.vercel.app";
+export const SITE_URL = "https://www.madebysensu.com";
 
 export const SITE_NAME = "Sensu";
 export const SITE_TAGLINE = "Rituals worth keeping.";
