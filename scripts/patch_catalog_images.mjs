@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 /**
- * Mark catalog products as "image-ready" — set images: [...] and remove
- * placeholder: true. Reads the manifest, infers max index per slug,
- * builds the image path array, and patches content/catalog.ts in place.
+ * Mark catalog products as "image-ready". Reads scripts/drive_manifest.json,
+ * resets every product's `images: [...]` → `images: []` plus restores
+ * `placeholder: true`, then writes the *manifest-driven* image arrays back
+ * in. This is the single-source-of-truth pattern; idempotent regardless of
+ * how many waves have run, and immune to regex-spill bugs.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -24,34 +26,58 @@ for (const m of Object.values(manifest)) {
 for (const s of Object.keys(bySlug)) bySlug[s].sort((a, b) => a - b);
 
 let src = fs.readFileSync(CATALOG_PATH, "utf8");
-let patched = 0;
 
+/**
+ * Replace within each product block. A product block is bounded by
+ * `slug:` markers; the regex's lookahead `(?!slug:)` ensures we never
+ * spill into the next product.
+ */
+function patchProductBlock(srcText, slug, mutate) {
+  const blockRe = new RegExp(
+    `(slug:\\s*"${slug}",(?:(?!\\sslug:)[\\s\\S])*?)(\\n\\s{2}\\},)`,
+    "m",
+  );
+  return srcText.replace(blockRe, (_full, block, closer) => {
+    return mutate(block) + closer;
+  });
+}
+
+// 1) Reset every product to images: [] + placeholder: true.
+//    Find each `slug: "..."` block and rewrite its images/placeholder lines.
+const allSlugs = [...src.matchAll(/slug:\s*"([\w-]+)",/g)].map((m) => m[1]);
+
+for (const slug of allSlugs) {
+  src = patchProductBlock(src, slug, (block) => {
+    // Replace images: [ ... ] (possibly long) with images: []
+    let next = block.replace(/images:\s*\[[^\]]*\]/, "images: []");
+    // Remove any existing placeholder: true line
+    next = next.replace(/\n\s+placeholder:\s*true,/g, "");
+    // Then insert `placeholder: true,` right after `images: []`
+    next = next.replace(
+      /(images:\s*\[\],)/,
+      `$1\n    placeholder: true,`,
+    );
+    return next;
+  });
+}
+
+// 2) For every slug in the manifest, set its images and drop placeholder.
+let patched = 0;
 for (const [slug, indices] of Object.entries(bySlug)) {
-  // Only patch if at least one image is mapped.
   if (indices.length === 0) continue;
   const imgs = indices
     .map((i) => `"/img/catalog/${slug}/${String(i).padStart(2, "0")}.png"`)
     .join(", ");
 
-  // Find this product's block: slug: "<slug>", ... images: [], ... (optional placeholder: true,)
-  const slugRe = new RegExp(
-    `(slug:\\s*"${slug}",[\\s\\S]*?)images:\\s*\\[\\]`,
-    "m",
-  );
   const before = src;
-  src = src.replace(slugRe, (_full, head) => `${head}images: [${imgs}]`);
-  if (src === before) {
-    console.warn("no images:[] match for", slug);
-    continue;
-  }
-  // Then strip placeholder: true within the same product block.
-  const phRe = new RegExp(
-    `(slug:\\s*"${slug}",[\\s\\S]*?)\\s+placeholder:\\s*true,`,
-    "m",
-  );
-  src = src.replace(phRe, "$1");
-  patched++;
+  src = patchProductBlock(src, slug, (block) => {
+    let next = block.replace(/images:\s*\[\]/, `images: [${imgs}]`);
+    next = next.replace(/\n\s+placeholder:\s*true,/g, "");
+    return next;
+  });
+  if (src !== before) patched++;
+  else console.warn("no match for", slug);
 }
 
 fs.writeFileSync(CATALOG_PATH, src);
-console.log(`patched ${patched} products`);
+console.log(`patched ${patched} products (${allSlugs.length} total in catalog)`);

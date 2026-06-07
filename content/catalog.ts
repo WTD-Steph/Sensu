@@ -116,7 +116,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · waveform",
     priceUSD: null,
-    images: ["/img/catalog/hikari-rain-pattern/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "1R1SPCJearlh1KlDSwaUa9sBiWOX9l_cU",
   },
   {
@@ -138,7 +139,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · frosted finish",
     priceUSD: null,
-    images: ["/img/catalog/hikari-3d-mountain/01.png"],
+    images: ["/img/catalog/hikari-frosted-gradient/01.png"],
     driveFolderId: "1pkMsBwTYeMwoBa7mnBTlSU-GgOCOXwIt",
   },
   {
@@ -149,7 +150,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · spoon",
     priceUSD: null,
-    images: ["/img/catalog/hikari-spinning-glass/01.png"],
+    images: ["/img/catalog/hikari-retro-glass-spoon/01.png"],
     driveFolderId: "1o6TZK0M2j6RJTFWkO3K3MntZQLuG14LU",
   },
   {
@@ -160,7 +161,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · sculptural object",
     priceUSD: null,
-    images: ["/img/catalog/hikari-shot-glass-w40/01.png"],
+    images: ["/img/catalog/hikari-retro-object/01.png"],
     driveFolderId: "19XtsZaFXKHKZEn2-luzAR7YfFXB0pfre",
   },
   {
@@ -171,7 +172,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · hourglass form",
     priceUSD: null,
-    images: ["/img/catalog/hikari-stone/01.png"],
+    images: ["/img/catalog/hikari-retro-hourglass/01.png"],
     driveFolderId: "1rrp_XciHB-VijKdbCBKtbPGIl5aylOeY",
   },
   {
@@ -182,7 +183,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · dessert bowl",
     priceUSD: null,
-    images: ["/img/catalog/hikari-server-and-cup/01.png"],
+    images: ["/img/catalog/hikari-retro-dessert-bowl/01.png"],
     driveFolderId: "1rZiSrvhmU9-SWp-F2zsAzuLyDJXRUOYS",
   },
   {
@@ -192,7 +193,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · spouted bowl + whisk holder",
     priceUSD: null,
-    images: ["/img/catalog/hikari-polkadot/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "16biIYGv1FdJfQ6pZujwp2FVOvtbKD1iO",
   },
   {
@@ -202,7 +204,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · glittery finish",
     priceUSD: null,
-    images: ["/img/catalog/hikari-rain-pattern/01.png"],
+    images: ["/img/catalog/hikari-starry-cup/01.png"],
     driveFolderId: "1XmupBxOWycWTBZ-hnrB6x4Gdi7tbnF3z",
   },
   {
@@ -212,7 +214,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · spouted bowl + holder set",
     priceUSD: null,
-    images: ["/img/catalog/hikari-3d-mountain/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "10HWJOqeqKCiENeeEGt8KL88JMJOyeZ-N",
   },
   {
@@ -222,7 +225,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · pitcher",
     priceUSD: null,
-    images: ["/img/catalog/hikari-spinning-glass/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "1BLQ1FhOoxCJ7gmQuZKzOgKaShIFQW3aN",
   },
 
@@ -257,7 +261,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · snow glaze chawan",
     priceUSD: null,
-    images: ["/img/catalog/hikari-shot-glass-w40/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "1lSr9Y3DVWWLxXOpsV9XO_-wi_H5akjsa",
   },
   {
@@ -288,7 +293,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · spouted matcha bowl",
     priceUSD: null,
-    images: ["/img/catalog/hikari-stone/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "1amXAkLbjqDvXku-Cexp9HYHyjpx-EMDj",
   },
   {
@@ -298,7 +304,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · matcha set",
     priceUSD: null,
-    images: ["/img/catalog/hikari-server-and-cup/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "1A_2TPu1OQLeF1-Sgg1ZHky2tLPuEdWdA",
   },
   {
@@ -308,7 +315,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · small cup",
     priceUSD: null,
-    images: ["/img/catalog/hikari-polkadot/01.png"],
+    images: ["/img/catalog/oboro-egg-cup/01.png"],
     driveFolderId: "1Gg1Vx7_Fhfb7rkT4SXTSZeRDH6w0jDf8",
   },
   {
@@ -318,7 +325,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · mug",
     priceUSD: null,
-    images: ["/img/catalog/oboro-pastel-series/01.png"],
+    images: ["/img/catalog/oboro-ring-mug/01.png"],
     driveFolderId: "1hLrgy9DuGaDtVfLXiTdSw8o0k7_bCrF6",
   },
   {
@@ -329,7 +336,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · tumbler with lid",
     priceUSD: null,
-    images: ["/img/catalog/oboro-wave-series-set/01.png"],
+    images: ["/img/catalog/oboro-tumbler/01.png"],
     driveFolderId: "1t0HZFBgM3BmGooOvQ4Png-rXEiTYvNuu",
   },
   {
@@ -340,7 +347,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · tumbler cup",
     priceUSD: null,
-    images: ["/img/catalog/oboro-chasen-naoshi/01.png"],
+    images: ["/img/catalog/oboro-tumbler-ceramic-cup/01.png"],
     driveFolderId: "1q4A3criWXFv1wWHapllThninemYNvvN0",
   },
   {
@@ -351,7 +358,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · matcha set",
     priceUSD: null,
-    images: ["/img/catalog/oboro-egg-mug-coaster/01.png"],
+    images: ["/img/catalog/oboro-strawberry-matcha-set/01.png"],
     driveFolderId: "107fdHYC83W4wm8aI-MFYGBN2xKnjnk9A",
   },
   {
@@ -362,7 +369,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · round whisk holder",
     priceUSD: null,
-    images: ["/img/catalog/oboro-egg-cup/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "1oUPUSip0jYAHK6UCBWvJWASnHUYejEvt",
   },
   {
@@ -372,7 +380,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · ink-brush plate",
     priceUSD: null,
-    images: ["/img/catalog/oboro-ring-mug/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "1A1g-UCEyjmgMRJPRB_CmuoOALYB3kHg8",
   },
   {
@@ -382,7 +391,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · gradient glaze",
     priceUSD: null,
-    images: ["/img/catalog/oboro-tumbler/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "1RgnVZg3M6veFT9ICRMINe2p4neU4yIYv",
   },
   {
@@ -392,7 +402,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · two-tone, two-shape",
     priceUSD: null,
-    images: ["/img/catalog/oboro-tumbler-ceramic-cup/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "1WPUEeEZE79R1xK8MLJB4ob3kTQSpp2L0",
   },
   {
@@ -402,7 +413,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · tea cup with strainer",
     priceUSD: null,
-    images: ["/img/catalog/oboro-strawberry-matcha-set/01.png"],
+    images: [],
+    placeholder: true,
     driveFolderId: "1I5DLRknmgr3lqYnPZ72zdtJtrwCTgT__",
   },
   {
@@ -413,8 +425,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Ceramic · solo cup",
     priceUSD: null,
     images: [],
-    driveFolderId: "1YR5Xgn9NNYWit_bqNx6VGOICuHNaX2IS",
     placeholder: true,
+    driveFolderId: "1YR5Xgn9NNYWit_bqNx6VGOICuHNaX2IS",
   },
   {
     slug: "oboro-textured-pattern",
@@ -424,8 +436,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Ceramic · textured cup + saucer",
     priceUSD: null,
     images: [],
-    driveFolderId: "1pkLpSQcZjmACWUo7EomHQUe_BLT0PNYW",
     placeholder: true,
+    driveFolderId: "1pkLpSQcZjmACWUo7EomHQUe_BLT0PNYW",
   },
   {
     slug: "oboro-artisan-espresso",
@@ -435,8 +447,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Ceramic · espresso cup",
     priceUSD: null,
     images: [],
-    driveFolderId: "1g-xrzVONJCWHuVdRepOpPmA99LtbrIPj",
     placeholder: true,
+    driveFolderId: "1g-xrzVONJCWHuVdRepOpPmA99LtbrIPj",
   },
   {
     slug: "oboro-speckled-matcha-cup",
@@ -446,8 +458,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Ceramic · speckled glaze",
     priceUSD: null,
     images: [],
-    driveFolderId: "1mMJntsd5T0a-5iZpOVMQCEniR8x_lV6N",
     placeholder: true,
+    driveFolderId: "1mMJntsd5T0a-5iZpOVMQCEniR8x_lV6N",
   },
   {
     slug: "oboro-marble-glaze-cup",
@@ -457,8 +469,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Ceramic · marble-effect glaze",
     priceUSD: null,
     images: [],
-    driveFolderId: "1b1tVBIQSqptioFDrRzFY_dmalpPEP-29",
     placeholder: true,
+    driveFolderId: "1b1tVBIQSqptioFDrRzFY_dmalpPEP-29",
   },
 
   // TAKE — 1 product
@@ -470,8 +482,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Bamboo · matcha whisk",
     priceUSD: null,
     images: [],
-    driveFolderId: "1Z-VZojAUZVC60xbkDl3Whk_e6LwcnBPq",
     placeholder: true,
+    driveFolderId: "1Z-VZojAUZVC60xbkDl3Whk_e6LwcnBPq",
   },
 
   // HAGANE — 5 products
@@ -483,8 +495,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Steel · airtight canister",
     priceUSD: null,
     images: [],
-    driveFolderId: "1qbey9PrQMM537CKCsod_T7I61Ad73qu-",
     placeholder: true,
+    driveFolderId: "1qbey9PrQMM537CKCsod_T7I61Ad73qu-",
   },
   {
     slug: "hagane-matcha-canister-sifter",
@@ -494,8 +506,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Steel · canister + mesh sifter",
     priceUSD: null,
     images: [],
-    driveFolderId: "1SK7Y3fuqo2O6lWojdjZRA8tV63i2N2yX",
     placeholder: true,
+    driveFolderId: "1SK7Y3fuqo2O6lWojdjZRA8tV63i2N2yX",
   },
   {
     slug: "hagane-modern-cup-saucer",
@@ -505,8 +517,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Stainless steel · cup + saucer",
     priceUSD: null,
     images: [],
-    driveFolderId: "1Qdn-7Gp4PubSqPFkoQICDgxxbs1__fHY",
     placeholder: true,
+    driveFolderId: "1Qdn-7Gp4PubSqPFkoQICDgxxbs1__fHY",
   },
   {
     slug: "hagane-pebble-chakoshi",
@@ -516,8 +528,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Steel · tea strainer",
     priceUSD: null,
     images: [],
-    driveFolderId: "1uYG2r1KInf1K3ILLY-GolJIIvY-G2CyW",
     placeholder: true,
+    driveFolderId: "1uYG2r1KInf1K3ILLY-GolJIIvY-G2CyW",
   },
   {
     slug: "hagane-teaspoon",
@@ -527,8 +539,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Steel · teaspoon",
     priceUSD: null,
     images: [],
-    driveFolderId: "1CbEl5zIRYlQmT0JrLmPetM8q1I7vaVYu",
     placeholder: true,
+    driveFolderId: "1CbEl5zIRYlQmT0JrLmPetM8q1I7vaVYu",
   },
 
   // MORI — 1 product
@@ -539,8 +551,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Wood + bamboo · matcha set",
     priceUSD: null,
     images: [],
-    driveFolderId: "1XsNhahMYxh2C5XETBUKB3Vk8EstZh9l7",
     placeholder: true,
+    driveFolderId: "1XsNhahMYxh2C5XETBUKB3Vk8EstZh9l7",
   },
 
   // YUGEN — 1 product
@@ -551,8 +563,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     detail: "Ceramic · premium cup + saucer",
     priceUSD: null,
     images: [],
-    driveFolderId: "1vnPhe8xIbhiBAuzeeZBflg_sfLLJt_C8",
     placeholder: true,
+    driveFolderId: "1vnPhe8xIbhiBAuzeeZBflg_sfLLJt_C8",
   },
 ];
 
