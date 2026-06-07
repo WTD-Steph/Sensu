@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
 import { BrailleDecoder } from "@/components/BrailleDecoder";
+import { Button } from "@/components/ui/Button";
 import { Orbit, Loop } from "@/components/motifs";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
@@ -190,18 +190,12 @@ function StoryBody() {
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href="/shop"
-              className="rounded-full bg-marble px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-whim transition-colors duration-200 ease-sensu hover:bg-void"
-            >
+            <Button href="/shop" variant="primary">
               Browse the shop
-            </Link>
-            <Link
-              href="/ritual"
-              className="rounded-full border border-void px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-void transition-colors duration-200 ease-sensu hover:bg-void hover:text-whim"
-            >
+            </Button>
+            <Button href="/ritual" variant="secondary">
               The matcha ritual
-            </Link>
+            </Button>
           </div>
         </div>
       </section>

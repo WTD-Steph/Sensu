@@ -10,6 +10,7 @@ import { COLLECTIONS } from "@/content/collections";
 import { formatUSD } from "@/content/products";
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductCatalogCard } from "@/components/ProductCatalogCard";
+import { Button } from "@/components/ui/Button";
 import { WHATSAPP_URL } from "@/lib/links";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
@@ -133,21 +134,19 @@ export default function ProductDetailPage({
 
                 {/* CTAs */}
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a
+                  <Button
                     href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-marble px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-whim transition-colors duration-200 ease-sensu hover:bg-void"
+                    variant="primary"
+                    trailingArrow="external"
                   >
                     Inquire on WhatsApp
-                    <span aria-hidden="true">↗</span>
-                  </a>
-                  <Link
+                  </Button>
+                  <Button
                     href={`/shop?collection=${collection.id}`}
-                    className="inline-flex items-center gap-2 rounded-full border border-void px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-void transition-colors duration-200 ease-sensu hover:bg-void hover:text-whim"
+                    variant="secondary"
                   >
                     More from {collection.name}
-                  </Link>
+                  </Button>
                 </div>
 
                 {product.placeholder ? (

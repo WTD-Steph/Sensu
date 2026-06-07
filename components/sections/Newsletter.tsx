@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { Button } from "@/components/ui/Button";
 import { IG_URL, WHOLESALE_EMAIL } from "@/lib/links";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -143,13 +144,16 @@ function SubscribeCard() {
           placeholder="hello@sensu.com"
         />
 
-        <button
+        <Button
           type="submit"
           disabled={status === "submitting"}
-          className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-whim px-5 py-3 text-[13px] font-medium uppercase tracking-[0.12em] text-void transition-colors duration-200 ease-sensu hover:bg-lumen disabled:opacity-60"
+          variant="primary"
+          onDark
+          trailingArrow={status === "submitting" ? undefined : "internal"}
+          className="mt-4 w-full"
         >
-          {status === "submitting" ? "Subscribing…" : "Subscribe →"}
-        </button>
+          {status === "submitting" ? "Subscribing…" : "Subscribe"}
+        </Button>
 
         {message ? (
           <p

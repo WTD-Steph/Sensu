@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Orbit } from "@/components/motifs";
+import { Button } from "@/components/ui/Button";
 import { WHOLESALE_EMAIL } from "@/lib/links";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
@@ -144,13 +145,14 @@ function PressBody() {
                   <h3 className="text-h3 font-bold">{a.label}</h3>
                   <p className="mt-1 text-body text-void/70">{a.sub}</p>
                 </div>
-                <a
+                <Button
                   href={a.href}
+                  variant="secondary"
+                  size="sm"
                   download
-                  className="rounded-full border border-void px-5 py-2.5 text-[13px] font-medium uppercase tracking-[0.12em] text-void transition-colors duration-200 ease-sensu hover:bg-void hover:text-whim"
                 >
                   Download
-                </a>
+                </Button>
               </li>
             ))}
           </ul>
@@ -173,13 +175,13 @@ function PressBody() {
           <p className="mb-8 max-w-prose text-body-lg text-void/70">
             For press inquiries, wholesale, and collaborations.
           </p>
-          <a
+          <Button
             href={`mailto:${WHOLESALE_EMAIL}`}
-            className="inline-flex items-center gap-2 rounded-full bg-void px-6 py-3.5 text-sm font-medium uppercase tracking-[0.08em] text-whim transition-colors duration-200 ease-sensu hover:bg-marble"
+            variant="primary"
+            trailingArrow="external"
           >
             {WHOLESALE_EMAIL}
-            <span aria-hidden="true">↗</span>
-          </a>
+          </Button>
 
           <div className="mt-12">
             <Link

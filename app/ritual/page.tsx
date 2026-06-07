@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Echo } from "@/components/motifs";
+import { Button } from "@/components/ui/Button";
 import { RITUAL_STEPS } from "@/content/ritual";
 import { WHATSAPP_URL } from "@/lib/links";
 import { breadcrumbJsonLd, howToMatchaJsonLd, jsonLdScript } from "@/lib/jsonld";
@@ -115,20 +116,17 @@ function RitualPageBody() {
             ritual. Designed to be used, not displayed.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <Link
-              href="/shop?collection=take"
-              className="rounded-full bg-whim px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-void transition-colors duration-200 ease-sensu hover:bg-lumen"
-            >
+            <Button href="/shop?collection=take" variant="primary" onDark>
               Browse the bundle
-            </Link>
-            <a
+            </Button>
+            <Button
               href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-whim/60 px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-whim transition-colors duration-200 ease-sensu hover:border-whim hover:bg-whim/10"
+              variant="secondary"
+              onDark
+              trailingArrow="external"
             >
               Ask on WhatsApp
-            </a>
+            </Button>
           </div>
         </div>
       </section>
