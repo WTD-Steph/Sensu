@@ -45,7 +45,7 @@ export function ProductCatalogCard({ product }: { product: CatalogProduct }) {
           {collection?.name ?? product.collection}
           {product.subline ? <span className="text-void/40"> · {product.subline}</span> : null}
         </p>
-        <h3 className="text-[20px] font-bold leading-tight text-void">
+        <h3 className="text-card-title font-bold text-void">
           {product.name}
         </h3>
         <p className="mt-1 text-[13px] text-void/70">{product.detail}</p>

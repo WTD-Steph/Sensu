@@ -79,21 +79,18 @@ Kept inline (semantic mismatch):
 - `ProductPlaceholder` caption (inherits text colour from surface
   via `opacity-75`, no fixed token)
 
-## Open questions for the founder
+## Founder decisions (resolved)
 
-1. **Lowercase headlines.** The DS rule reads *"Headlines are
-   lowercase, bold, with one word lifted into light-italic Marble."*
-   The Hero h1 follows it (`rituals worth keeping`). The section H2s
-   and route H1s are sentence-case (`A quiet confidence in what
-   feels right`, `Sensu was born from a quiet question`).
-   Should "lowercase" extend to every headline site-wide, or only
-   to the display Hero h1? — **TODO(design-system): need answer**.
-2. **`ProductCatalogCard` title size.** Uses `text-[20px]` (between
-   the `body-lg` 17→20 and `h3` 22→36 steps of the scale).
-   Bumping to `text-h3` makes catalog cards visually heavier
-   (and reduces grid density); dropping to `text-body-lg font-bold`
-   keeps density but feels less heading-like.
-   — **TODO(design-system): need call**.
+1. **Lowercase headlines: Hero/display only.** Section H2s and route
+   H1s stay sentence-case. The `lowercase` rule applies as a display-
+   typography move, not a global rule. Current code already matches —
+   no change needed.
+2. **`ProductCatalogCard` title size.** Locked at 20px as an
+   explicit scale-exception. Added `text-card-title` token in
+   [tailwind.config.ts](../tailwind.config.ts) (`20px` fixed,
+   `lineHeight 1.3`, `letterSpacing -0.01em`) and applied it in
+   `ProductCatalogCard`. Use only there; everywhere else use the
+   fluid type scale (`text-h1/h2/h3/body-lg/body/caption`).
 
 ## Not in scope (deferred follow-ups)
 

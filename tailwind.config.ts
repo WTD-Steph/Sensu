@@ -35,6 +35,11 @@ const config: Config = {
         h1: ["clamp(36px, 5vw, 88px)", { lineHeight: "1.02", letterSpacing: "-0.02em" }],
         h2: ["clamp(28px, 3.6vw, 56px)", { lineHeight: "1.04", letterSpacing: "-0.015em" }],
         h3: ["clamp(22px, 2.4vw, 36px)", { lineHeight: "1.1", letterSpacing: "-0.01em" }],
+        // Scale-exception fixed-size token for dense product-card grids.
+        // Sits between body-lg (max 20px) and h3 (min 22px) but holds at
+        // 20px rather than scaling fluidly, so the catalog grid stays
+        // tight. Use only on ProductCatalogCard titles.
+        "card-title": ["20px", { lineHeight: "1.3", letterSpacing: "-0.01em" }],
         "body-lg": ["clamp(17px, 1.4vw, 20px)", { lineHeight: "1.55" }],
         body: ["clamp(15px, 1.1vw, 17px)", { lineHeight: "1.6" }],
         caption: ["12.5px", { lineHeight: "1.2", letterSpacing: "0.18em" }],
