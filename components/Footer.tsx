@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { BrailleDecoder } from "@/components/BrailleDecoder";
 import { MotionToggle } from "@/components/MotionToggle";
-import { IG_URL, SHOPEE_URL, WHATSAPP_URL, WHOLESALE_EMAIL } from "@/lib/links";
+import { IG_URL, WHATSAPP_URL, WHOLESALE_EMAIL } from "@/lib/links";
 
 /**
  * Footer per §5.9 of the rebuild brief.
@@ -38,9 +38,7 @@ export function Footer() {
           </FooterCol>
 
           <FooterCol heading="Shop">
-            <FooterLink href={SHOPEE_URL} external>
-              Shopee storefront ↗
-            </FooterLink>
+            <FooterLink href="/shop">Catalog</FooterLink>
             <FooterLink href={WHATSAPP_URL} external>
               WhatsApp inquiry ↗
             </FooterLink>

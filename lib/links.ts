@@ -1,15 +1,8 @@
 /**
- * Outbound links and config. Anywhere a Shopee, WhatsApp, IG, or contact
- * link is needed, import from here — so the founder can swap operational
- * details in one place once they're confirmed.
- *
- * TODOs marked here are the only places I won't fabricate values.
+ * Outbound links and config. Operational URLs (WhatsApp, IG, contact
+ * inbox) live here so the founder can swap them in one place once they
+ * are confirmed.
  */
-
-// TODO(shopee-url): replace fallback with the real storefront URL once the
-// founder shares it. Until then this opens a Shopee search for "sensu".
-export const SHOPEE_URL =
-  "https://shopee.co.id/search?keyword=sensu";
 
 // TODO(whatsapp-number): replace `?` with the actual WA Business number in
 // international format (no +, no spaces). Currently opens a wa.me prompt with

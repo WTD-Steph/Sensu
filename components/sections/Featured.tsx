@@ -3,10 +3,10 @@ import { PRODUCTS } from "@/content/products";
 import { WHATSAPP_URL } from "@/lib/links";
 
 /**
- * Featured pieces — §5.5 of the brief. Renders all entries from
- * content/products.ts. Each card gets a Shopee hover CTA. The brief's
- * suggested 6-8 cap is honored; if PRODUCTS grows beyond that, slice
- * here.
+ * Featured pieces. Renders up to 8 entries from content/products.ts.
+ * Each card links into /shop?collection={c} so clicks drop the user
+ * into the filtered catalog. C4 will swap this for a real catalog
+ * picker.
  */
 export function Featured() {
   return (
@@ -31,7 +31,8 @@ export function Featured() {
         </div>
 
         <p className="mt-12 text-center text-body text-void/65">
-          A selection from the Sensu line. Tap any piece to shop on Shopee, or{" "}
+          A selection from the Sensu line. Tap any piece to browse the
+          collection, or{" "}
           <a
             href={WHATSAPP_URL}
             target="_blank"

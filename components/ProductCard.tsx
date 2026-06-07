@@ -1,10 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import { formatUSD, type Product } from "@/content/products";
 import { COLLECTIONS } from "@/content/collections";
-import { SHOPEE_URL } from "@/lib/links";
 
 const COLLECTION_BY_ID = Object.fromEntries(
-  COLLECTIONS.map((c) => [c.id, c])
+  COLLECTIONS.map((c) => [c.id, c]),
 );
 
 // Colour identity for each collection chip. Rendered as a 9px dot
@@ -20,16 +20,18 @@ const COLLECTION_DOT: Record<Product["collection"], string> = {
 };
 
 /**
- * Single product card. Hover (desktop) slides up a "Shop on Shopee"
- * pill. Each card links to the per-product `shopeeUrl` if set,
- * otherwise the global SHOPEE_URL fallback (whose value the founder
- * still needs to confirm — see lib/links.ts).
+ * Featured-section product card. Wraps the whole card in a Link to
+ * /shop (filtered by the product's collection) so clicks land in the
+ * catalog. C4 will replace this component with one that maps directly
+ * to /shop/{slug} once Featured pulls from the real catalog.
  */
 export function ProductCard({ product }: { product: Product }) {
   const c = COLLECTION_BY_ID[product.collection];
-  const href = product.shopeeUrl ?? SHOPEE_URL;
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-card-lg border border-black/10 bg-whim transition-transform duration-300 ease-sensu hover:-translate-y-1">
+    <Link
+      href={`/shop?collection=${product.collection}`}
+      className="group relative flex flex-col overflow-hidden rounded-card-lg border border-black/10 bg-whim transition-transform duration-300 ease-sensu hover:-translate-y-1"
+    >
       <div className="relative aspect-square overflow-hidden bg-whim-warm">
         <Image
           src={product.image}
@@ -38,17 +40,6 @@ export function ProductCard({ product }: { product: Product }) {
           sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover transition-transform duration-500 ease-sensu group-hover:scale-105"
         />
-
-        {/* Hover Shopee CTA */}
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 translate-y-4 rounded-full bg-void px-4 py-2 text-[12px] font-medium uppercase tracking-[0.12em] text-whim opacity-0 transition-all duration-300 ease-sensu group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100"
-          aria-label={`Shop ${product.name} on Shopee`}
-        >
-          Shop on Shopee ↗
-        </a>
 
         {product.placeholder ? (
           <span className="absolute left-3 top-3 rounded-full bg-void/80 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-whim">
@@ -72,6 +63,6 @@ export function ProductCard({ product }: { product: Product }) {
           {formatUSD(product.priceUSD)}
         </p>
       </div>
-    </article>
+    </Link>
   );
 }

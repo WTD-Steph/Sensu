@@ -21,8 +21,6 @@ export type Product = {
   priceUSD: number;
   /** Public image path under /public — square crop preferred. */
   image: string;
-  /** Per-product Shopee URL if the founder has confirmed it; falls back to global SHOPEE_URL otherwise. */
-  shopeeUrl?: string;
   /** Marks the product as not yet confirmed against the actual SKU list. */
   placeholder?: boolean;
 };

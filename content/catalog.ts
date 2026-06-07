@@ -35,8 +35,6 @@ export type CatalogProduct = {
   images: ReadonlyArray<string>;
   /** Source Drive folder ID — root of the product's photo set. */
   driveFolderId: string;
-  /** Per-product Shopee URL once the founder shares it. */
-  shopeeUrl?: string;
   /** Set while `images` is empty; the UI falls back to a placeholder visual. */
   placeholder?: boolean;
 };

@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Echo } from "@/components/motifs";
 import { RITUAL_STEPS } from "@/content/ritual";
-import { SHOPEE_URL, WHATSAPP_URL } from "@/lib/links";
+import { WHATSAPP_URL } from "@/lib/links";
 import { breadcrumbJsonLd, howToMatchaJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
@@ -115,14 +115,12 @@ function RitualPageBody() {
             ritual. Designed to be used, not displayed.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <a
-              href={SHOPEE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/shop?collection=take"
               className="rounded-full bg-whim px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-void transition-colors duration-200 ease-sensu hover:bg-lumen"
             >
-              Shop the bundle ↗
-            </a>
+              Browse the bundle
+            </Link>
             <a
               href={WHATSAPP_URL}
               target="_blank"

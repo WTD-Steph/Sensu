@@ -95,7 +95,8 @@ export default function ShopPage({
             <p className="mt-12 max-w-prose text-sm text-void/55">
               Many pieces are listed without final photography or pricing
               while the line is being readied for launch. Tap any product
-              for the gallery and a Shopee link.
+              for the gallery — message us on WhatsApp for orders and
+              custom inquiries.
             </p>
           </div>
         </section>

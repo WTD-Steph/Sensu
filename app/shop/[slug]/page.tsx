@@ -10,7 +10,7 @@ import { COLLECTIONS } from "@/content/collections";
 import { formatUSD } from "@/content/products";
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductCatalogCard } from "@/components/ProductCatalogCard";
-import { SHOPEE_URL, WHATSAPP_URL } from "@/lib/links";
+import { WHATSAPP_URL } from "@/lib/links";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export function generateStaticParams() {
@@ -43,7 +43,6 @@ export default function ProductDetailPage({
   const collection = COLLECTIONS.find((c) => c.id === product.collection);
   if (!collection) notFound();
 
-  const shopeeHref = product.shopeeUrl ?? SHOPEE_URL;
   const related = getProductsByCollection(product.collection)
     .filter((p) => p.slug !== product.slug)
     .slice(0, 4);
@@ -135,22 +134,20 @@ export default function ProductDetailPage({
                 {/* CTAs */}
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
-                    href={shopeeHref}
+                    href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-full bg-marble px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-whim transition-colors duration-200 ease-sensu hover:bg-void"
                   >
-                    Shop on Shopee
+                    Inquire on WhatsApp
                     <span aria-hidden="true">↗</span>
                   </a>
-                  <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href={`/shop?collection=${collection.id}`}
                     className="inline-flex items-center gap-2 rounded-full border border-void px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-void transition-colors duration-200 ease-sensu hover:bg-void hover:text-whim"
                   >
-                    Ask on WhatsApp
-                  </a>
+                    More from {collection.name}
+                  </Link>
                 </div>
 
                 {product.placeholder ? (

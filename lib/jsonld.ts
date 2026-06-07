@@ -60,7 +60,7 @@ function productJsonLd(p: Product) {
       priceCurrency: "USD",
       price: p.priceUSD,
       availability: "https://schema.org/InStock",
-      url: p.shopeeUrl ?? SITE_URL,
+      url: SITE_URL,
     },
   };
 }

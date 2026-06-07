@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { SHOPEE_URL } from "@/lib/links";
 import { easeSensu } from "@/lib/motion";
 
 /* eslint-disable @next/next/no-img-element */
@@ -70,7 +69,7 @@ export function Nav() {
 
         <nav
           aria-label="Primary"
-          className="hidden flex-1 gap-7 text-[13.5px] font-medium uppercase tracking-[0.04em] md:flex"
+          className="ml-auto hidden gap-7 text-[13.5px] font-medium uppercase tracking-[0.04em] md:flex"
         >
           {NAV_LINKS.map((l) => (
             <Link
@@ -82,16 +81,6 @@ export function Nav() {
             </Link>
           ))}
         </nav>
-
-        <a
-          href={SHOPEE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ml-auto inline-flex items-center gap-2 rounded-full bg-void px-5 py-3 text-[13.5px] font-medium uppercase tracking-[0.06em] text-whim transition-colors duration-200 ease-sensu hover:bg-marble"
-        >
-          Shop the line
-          <span aria-hidden="true">↗</span>
-        </a>
       </div>
     </motion.header>
   );

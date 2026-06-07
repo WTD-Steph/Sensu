@@ -44,7 +44,7 @@ app/
 components/
   Nav.tsx                # sticky, hide-on-scroll-down
   Footer.tsx             # four cols + oversized Braille backdrop + MotionToggle
-  AnnouncementBar.tsx    # dismissible Shopee bar, persisted to localStorage
+  WhatsAppButton.tsx     # floating bottom-right inquiry button
   WhatsAppButton.tsx     # floating bottom-right
   SmoothScrollProvider.tsx
   MotionToggle.tsx       # "Pause motion" toggle (a11y opt-out)
@@ -56,7 +56,7 @@ components/
 content/
   collections.ts products.ts ritual.ts instagram.json
 lib/
-  links.ts               # SHOPEE_URL / WHATSAPP_URL / IG_URL / email
+  links.ts               # WHATSAPP_URL / IG_URL / email
   braille.ts             # UEB 6-dot map
   jsonld.ts              # Organization / WebSite / Product / HowTo / Breadcrumb
   motion.ts              # easings + framer-motion variants
@@ -72,7 +72,6 @@ build is never blocked but the values are easy to find:
 
 | Marker                  | Where                          | What to fill in                                 |
 | ----------------------- | ------------------------------ | ----------------------------------------------- |
-| `TODO(shopee-url)`      | `lib/links.ts`                 | The real Shopee storefront URL                  |
 | `TODO(whatsapp-number)` | `lib/links.ts`                 | WhatsApp Business number (international, no `+`)|
 | `TODO(wholesale-email)` | `lib/links.ts`                 | Confirm `hello@madebysensu.com` or replace      |
 | `TODO(provider)`        | `app/api/subscribe/route.ts`   | Wire newsletter to ConvertKit/Mailchimp/Resend  |

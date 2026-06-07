@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Orbit } from "@/components/motifs";
-import { SHOPEE_URL } from "@/lib/links";
 
 /**
  * Hero — Act 1 (the part above the fold).
@@ -37,14 +36,12 @@ export function Hero() {
             moment of stillness, intention, and grace.
           </p>
           <div className="mb-9 flex flex-wrap gap-3">
-            <a
-              href={SHOPEE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/shop"
               className="rounded-full bg-marble px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-whim transition-colors duration-200 ease-sensu hover:bg-void"
             >
-              Shop the line ↗
-            </a>
+              Browse the shop
+            </Link>
             <Link
               href="/story"
               className="rounded-full border border-void px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-void transition-colors duration-200 ease-sensu hover:bg-void hover:text-whim"

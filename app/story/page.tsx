@@ -3,7 +3,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { BrailleDecoder } from "@/components/BrailleDecoder";
 import { Orbit, Loop } from "@/components/motifs";
-import { SHOPEE_URL } from "@/lib/links";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
@@ -24,7 +23,7 @@ export const metadata: Metadata = {
  *      the first two.
  *   4. Loop motif + materials breakdown.
  *   5. Signature line.
- *   6. Closing CTA pair → Shopee + back home.
+ *   6. Closing CTA pair → /shop + /ritual.
  */
 export default function StoryPage() {
   return (
@@ -191,14 +190,12 @@ function StoryBody() {
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">
-            <a
-              href={SHOPEE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/shop"
               className="rounded-full bg-marble px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-whim transition-colors duration-200 ease-sensu hover:bg-void"
             >
-              Shop the line ↗
-            </a>
+              Browse the shop
+            </Link>
             <Link
               href="/ritual"
               className="rounded-full border border-void px-6 py-3.5 text-sm font-medium uppercase tracking-[0.06em] text-void transition-colors duration-200 ease-sensu hover:bg-void hover:text-whim"
