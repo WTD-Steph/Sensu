@@ -1,0 +1,12 @@
+{
+  "_doc": "Maps Drive file IDs → catalog product slug + image index. Populated as C3 downloads come in. The decoder script scans tool-result base64 files and writes to public/img/catalog/{slug}/{index:02d}.png.",
+  "mappings": {
+    "1MbX5vNM4A0DLtox80oc8sVBtwAd4vlDS": { "slug": "hikari-rain-pattern", "index": 1 },
+    "1DL0okvNga6How9wsgDHAN1KFZoOe2NRe": { "slug": "hikari-3d-mountain", "index": 1 },
+    "1JsA2jz5I6UZvlT9BjP1_9sb7h5OImuJu": { "slug": "hikari-spinning-glass", "index": 1 },
+    "1eNXn6xa5dg-UfgwAAI9l0ab4K696kMH_": { "slug": "hikari-shot-glass-w40", "index": 1 },
+    "1zgxAQt1A7j_XGY6CfZMv82FMZS_AqVMU": { "slug": "hikari-stone", "index": 1 },
+    "1-81QaWIK3X5h_ggV6q8q5EJKlMrc4Odi": { "slug": "hikari-server-and-cup", "index": 1 },
+    "1m1ytIVxriedGC4kNoQA7i-u4ToAaFACW": { "slug": "hikari-polkadot", "index": 1 }
+  }
+}
