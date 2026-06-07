@@ -494,8 +494,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hagane",
     detail: "Steel · airtight canister",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/hagane-matcha-canister/01.jpg"],
     driveFolderId: "1qbey9PrQMM537CKCsod_T7I61Ad73qu-",
   },
   {
@@ -505,8 +504,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hagane",
     detail: "Steel · canister + mesh sifter",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/hagane-matcha-canister-sifter/01.png"],
     driveFolderId: "1SK7Y3fuqo2O6lWojdjZRA8tV63i2N2yX",
   },
   {
@@ -516,8 +514,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hagane",
     detail: "Stainless steel · cup + saucer",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/hagane-modern-cup-saucer/01.png"],
     driveFolderId: "1Qdn-7Gp4PubSqPFkoQICDgxxbs1__fHY",
   },
   {
@@ -527,8 +524,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hagane",
     detail: "Steel · tea strainer",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/hagane-pebble-chakoshi/01.png"],
     driveFolderId: "1uYG2r1KInf1K3ILLY-GolJIIvY-G2CyW",
   },
   {
@@ -538,8 +534,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hagane",
     detail: "Steel · teaspoon",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/hagane-teaspoon/01.png"],
     driveFolderId: "1CbEl5zIRYlQmT0JrLmPetM8q1I7vaVYu",
   },
 
@@ -550,8 +545,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "mori",
     detail: "Wood + bamboo · matcha set",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/mori-matcha-bowl-chasen-set/01.jpg"],
     driveFolderId: "1XsNhahMYxh2C5XETBUKB3Vk8EstZh9l7",
   },
 
@@ -562,8 +556,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "yugen",
     detail: "Ceramic · premium cup + saucer",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/yugen-coffee-cup-saucer/01.jpg"],
     driveFolderId: "1vnPhe8xIbhiBAuzeeZBflg_sfLLJt_C8",
   },
 ];

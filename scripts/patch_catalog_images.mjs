@@ -25,6 +25,17 @@ for (const m of Object.values(manifest)) {
 }
 for (const s of Object.keys(bySlug)) bySlug[s].sort((a, b) => a - b);
 
+// Resolve the actual on-disk extension for a slug+index (png or jpg).
+const PUBLIC_CATALOG = path.join(projectRoot, "public/img/catalog");
+function resolveExt(slug, index) {
+  const dir = path.join(PUBLIC_CATALOG, slug);
+  if (!fs.existsSync(dir)) return "png";
+  const prefix = `${String(index).padStart(2, "0")}.`;
+  const found = fs.readdirSync(dir).find((f) => f.startsWith(prefix));
+  if (!found) return "png";
+  return found.slice(prefix.length);
+}
+
 let src = fs.readFileSync(CATALOG_PATH, "utf8");
 
 /**
@@ -66,7 +77,10 @@ let patched = 0;
 for (const [slug, indices] of Object.entries(bySlug)) {
   if (indices.length === 0) continue;
   const imgs = indices
-    .map((i) => `"/img/catalog/${slug}/${String(i).padStart(2, "0")}.png"`)
+    .map((i) => {
+      const ext = resolveExt(slug, i);
+      return `"/img/catalog/${slug}/${String(i).padStart(2, "0")}.${ext}"`;
+    })
     .join(", ");
 
   const before = src;
