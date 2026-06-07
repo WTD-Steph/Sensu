@@ -85,9 +85,9 @@ export default function ShopPage({
             {products.length === 0 ? (
               <EmptyState />
             ) : (
-              <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <ul className="grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {products.map((p) => (
-                  <li key={p.slug}>
+                  <li key={p.slug} className="flex">
                     <ProductCatalogCard product={p} />
                   </li>
                 ))}

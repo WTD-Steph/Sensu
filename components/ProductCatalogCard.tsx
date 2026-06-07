@@ -20,7 +20,7 @@ export function ProductCatalogCard({ product }: { product: CatalogProduct }) {
   return (
     <Link
       href={href}
-      className="group flex flex-col overflow-hidden rounded-card-lg border border-black/10 bg-whim transition-transform duration-300 ease-sensu hover:-translate-y-1 hover:shadow-[0_20px_40px_-24px_rgba(22,21,20,0.18)]"
+      className="group flex h-full flex-col overflow-hidden rounded-card-lg border border-black/10 bg-whim transition-transform duration-300 ease-sensu hover:-translate-y-1 hover:shadow-[0_20px_40px_-24px_rgba(22,21,20,0.18)]"
     >
       <div className="relative aspect-square overflow-hidden">
         {heroImage ? (
@@ -49,8 +49,15 @@ export function ProductCatalogCard({ product }: { product: CatalogProduct }) {
           {product.name}
         </h3>
         <p className="mt-1 text-[13px] text-void/70">{product.detail}</p>
-        <p className="mt-3 text-[15px] font-semibold tracking-wider text-void">
-          {product.priceUSD != null ? formatUSD(product.priceUSD) : (
+        <p className="mt-auto pt-4 text-[15px] font-semibold tracking-wider text-void">
+          {product.priceUSD != null ? (
+            <>
+              <span>{formatUSD(product.priceUSD)}</span>
+              <span className="ml-1 align-middle text-[10px] font-medium uppercase tracking-eyebrow text-void/45">
+                est.
+              </span>
+            </>
+          ) : (
             <span className="text-void/55">Coming soon</span>
           )}
         </p>
