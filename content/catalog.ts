@@ -193,8 +193,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · spouted bowl + whisk holder",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/hikari-katakuchi-chasen-holder/01.jpg"],
     driveFolderId: "16biIYGv1FdJfQ6pZujwp2FVOvtbKD1iO",
   },
   {
@@ -214,8 +213,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · spouted bowl + holder set",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/hikari-katakuchi-glass-set/01.png"],
     driveFolderId: "10HWJOqeqKCiENeeEGt8KL88JMJOyeZ-N",
   },
   {
@@ -225,8 +223,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "hikari",
     detail: "Glass · pitcher",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/hikari-clear-pastel-server/01.jpg"],
     driveFolderId: "1BLQ1FhOoxCJ7gmQuZKzOgKaShIFQW3aN",
   },
 
@@ -304,8 +301,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · matcha set",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/oboro-katakuchi-chasen-holder/01.png"],
     driveFolderId: "1A_2TPu1OQLeF1-Sgg1ZHky2tLPuEdWdA",
   },
   {
@@ -410,8 +406,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · tea cup with strainer",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/oboro-shizen-tasting-strainer/01.png"],
     driveFolderId: "1I5DLRknmgr3lqYnPZ72zdtJtrwCTgT__",
   },
   {
@@ -421,8 +416,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · solo cup",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/oboro-single-tea-pastel/01.jpg"],
     driveFolderId: "1YR5Xgn9NNYWit_bqNx6VGOICuHNaX2IS",
   },
   {
@@ -432,8 +426,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · textured cup + saucer",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/oboro-textured-pattern/01.jpg"],
     driveFolderId: "1pkLpSQcZjmACWUo7EomHQUe_BLT0PNYW",
   },
   {
@@ -443,8 +436,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · espresso cup",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/oboro-artisan-espresso/01.jpg"],
     driveFolderId: "1g-xrzVONJCWHuVdRepOpPmA99LtbrIPj",
   },
   {
@@ -454,8 +446,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · speckled glaze",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/oboro-speckled-matcha-cup/01.jpg"],
     driveFolderId: "1mMJntsd5T0a-5iZpOVMQCEniR8x_lV6N",
   },
   {
@@ -465,8 +456,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · marble-effect glaze",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/oboro-marble-glaze-cup/01.jpg"],
     driveFolderId: "1b1tVBIQSqptioFDrRzFY_dmalpPEP-29",
   },
 
