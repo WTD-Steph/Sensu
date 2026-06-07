@@ -380,8 +380,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · ink-brush plate",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/oboro-gingko-saucer/01.png"],
     driveFolderId: "1A1g-UCEyjmgMRJPRB_CmuoOALYB3kHg8",
   },
   {
@@ -391,8 +390,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · gradient glaze",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/oboro-colorful-gradient/01.png"],
     driveFolderId: "1RgnVZg3M6veFT9ICRMINe2p4neU4yIYv",
   },
   {
@@ -402,8 +400,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "oboro",
     detail: "Ceramic · two-tone, two-shape",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/oboro-two-tone-cup/01.png"],
     driveFolderId: "1WPUEeEZE79R1xK8MLJB4ob3kTQSpp2L0",
   },
   {
@@ -481,8 +478,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     collection: "take",
     detail: "Bamboo · matcha whisk",
     priceUSD: null,
-    images: [],
-    placeholder: true,
+    images: ["/img/catalog/take-chasen/01.png"],
     driveFolderId: "1Z-VZojAUZVC60xbkDl3Whk_e6LwcnBPq",
   },
 
