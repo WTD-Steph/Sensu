@@ -66,7 +66,7 @@ export function Footer() {
         <div className="mt-16 flex flex-col items-start justify-between gap-6 border-t border-whim/15 pt-8 text-[13px] text-whim/60 md:flex-row md:items-center">
           <div>
             <p className="text-whim">Sensu · センス</p>
-            <p>Japanese-inspired drinkware, made for the modern hand.</p>
+            <p>Designed in Hasami, Japan.</p>
             <p>© 2025 Sensu · All rights reserved.</p>
             <div className="mt-3">
               <MotionToggle />

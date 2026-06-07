@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const FACTS = [
   { label: "Founded", value: "2025" },
-  { label: "Categories", value: "Drinkware · Tea tools · Tableware" },
+  { label: "Designed in", value: "Hasami, Japan · 波佐見" },
   { label: "Material lines", value: "4 — Hikari · Oboro · Take · Takumi" },
   { label: "Pieces in line", value: "30+ handcrafted" },
 ];

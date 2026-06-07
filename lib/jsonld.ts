@@ -24,6 +24,10 @@ export function organizationJsonLd() {
     image: MARK_URL,
     slogan: SITE_TAGLINE,
     foundingDate: "2025",
+    foundingLocation: {
+      "@type": "Place",
+      name: "Hasami, Nagasaki, Japan",
+    },
     sameAs: [IG_URL],
     contactPoint: {
       "@type": "ContactPoint",
