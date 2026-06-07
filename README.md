@@ -45,16 +45,17 @@ components/
   Nav.tsx                # sticky, hide-on-scroll-down
   Footer.tsx             # four cols + oversized Braille backdrop + MotionToggle
   WhatsAppButton.tsx     # floating bottom-right inquiry button
-  WhatsAppButton.tsx     # floating bottom-right
   SmoothScrollProvider.tsx
   MotionToggle.tsx       # "Pause motion" toggle (a11y opt-out)
   BrailleDecoder.tsx     # the Sensu wordmark in 6-dot Braille
+  ui/                    # design-system primitives — Button · Eyebrow
   motifs/                # Orbit · Echo · Syntax · Hatch · Loop · Pulse
   sections/              # Hero · Story · BrailleReveal · Collections
                          # Featured · RitualTeaser · SensuCircle · Newsletter
-  ProductCard.tsx · InstagramGrid.tsx
+  ProductCard.tsx · ProductCatalogCard.tsx · ProductGallery.tsx
+  ProductPlaceholder.tsx · CategoryFilter.tsx · InstagramGrid.tsx
 content/
-  collections.ts products.ts ritual.ts instagram.json
+  collections.ts products.ts catalog.ts ritual.ts instagram.json
 lib/
   links.ts               # WHATSAPP_URL / IG_URL / email
   braille.ts             # UEB 6-dot map
