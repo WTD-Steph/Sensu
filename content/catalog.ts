@@ -307,7 +307,17 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     driveFolderId: "1Z-VZojAUZVC60xbkDl3Whk_e6LwcnBPq",
   },
 
-  // HAGANE — 3 products
+  // HAGANE — 4 products
+  {
+    slug: "hagane-matcha-canister",
+    number: 16,
+    name: "Hagane Matcha Canister",
+    collection: "hagane",
+    detail: "Steel · airtight canister",
+    priceUSD: null,
+    images: ["/img/catalog/hagane-matcha-canister/01.png"],
+    driveFolderId: "1qbey9PrQMM537CKCsod_T7I61Ad73qu-",
+  },
   {
     slug: "hagane-matcha-canister-sifter",
     name: "Hagane Airtight Matcha Canister",
