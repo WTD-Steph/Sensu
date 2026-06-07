@@ -98,9 +98,9 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     placeholder: true,
   },
   {
-    id: "takumi-set",
-    name: "Takumi Premium Set",
-    collection: "takumi",
+    id: "yugen-set",
+    name: "Yugen Premium Set",
+    collection: "yugen",
     blurb: "A premium editorial set, mixing materials with intention.",
     detail: "Mixed materials · premium",
     priceUSD: 45,

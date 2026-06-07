@@ -14,7 +14,9 @@ const COLLECTION_DOT: Record<Product["collection"], string> = {
   hikari: "bg-flare",
   oboro: "bg-marble",
   take: "bg-void",
-  takumi: "bg-marble",
+  hagane: "bg-void-soft",
+  mori: "bg-whim-warm",
+  yugen: "bg-marble",
 };
 
 /**
