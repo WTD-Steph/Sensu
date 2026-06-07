@@ -1,9 +1,16 @@
 /**
- * Sensu product catalog — enumerated from the brand's Drive folder
- * `1f_cm9kFOOEK3TpFcrH8zEovPPGYiGyf0` (47 products, May 2026 snapshot).
+ * Sensu product catalog — curated subset of the brand's Drive folder
+ * `1f_cm9kFOOEK3TpFcrH8zEovPPGYiGyf0`.
  *
- * Each entry carries the source Drive folder ID so C3 of the rebuild
- * can fetch hero photos from the "Edited" subfolder of each.
+ * Cleanup pass June 2026 — kept only products with brand-template
+ * photography (Edited/Product Photo PNGs with the Marble-circle
+ * backdrop and kanji watermark). Removed:
+ *  - Supplier-sourced JPEGs (Alibaba files with `O1CN…` filenames)
+ *  - Products on placeholder with no usable source image
+ *  - MORI and YUGEN collection products (collections themselves are
+ *    being held until visual line is fully shot in-house)
+ *  - A handful of SKUs whose product visuals don't match the rest
+ *    of the catalog yet
  *
  * Conventions
  * - `slug`         url-safe identifier, used as the /shop/[slug] path
@@ -11,11 +18,10 @@
  *                  applicable; some newer SKUs use codes instead
  * - `name`         clean product name (no "SENSU" prefix — implied)
  * - `subline`      optional series name within a collection
- * - `images`       paths under /public/img/catalog/{slug}/ — empty
- *                  until C3 pulls them
+ * - `images`       paths under /public/img/catalog/{slug}/
  * - `priceUSD`     null until founder confirms prices for each line
  * - `driveFolderId` source-of-truth in Drive
- * - `placeholder`  true while images are still empty
+ * - `placeholder`  reserved for future SKUs without final photography
  */
 import type { CollectionId } from "./collections";
 
@@ -31,7 +37,7 @@ export type CatalogProduct = {
   description?: string;
   /** USD whole dollars. Null = pricing not yet confirmed. */
   priceUSD: number | null;
-  /** Image paths under /public. Empty array until C3 pulls images. */
+  /** Image paths under /public. Empty array = placeholder. */
   images: ReadonlyArray<string>;
   /** Source Drive folder ID — root of the product's photo set. */
   driveFolderId: string;
@@ -40,7 +46,7 @@ export type CatalogProduct = {
 };
 
 export const CATALOG: ReadonlyArray<CatalogProduct> = [
-  // HIKARI — 14 products
+  // HIKARI — 11 products
   {
     slug: "hikari-rain-pattern",
     number: 1,
@@ -75,17 +81,6 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     driveFolderId: "1ac1a2mC2B4IcQqLLCkU_P7X_cX4QlWvX",
   },
   {
-    slug: "hikari-shot-glass-w40",
-    number: 4,
-    name: "Hikari Shot Glass",
-    subline: "W40",
-    collection: "hikari",
-    detail: "Glass · 40ml",
-    priceUSD: null,
-    images: ["/img/catalog/hikari-shot-glass-w40/01.png"],
-    driveFolderId: "1s-rHOW13pqtHm1LMAfDkzHZQxvPAqOVt",
-  },
-  {
     slug: "hikari-stone",
     number: 5,
     name: "Hikari Cup",
@@ -95,28 +90,6 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     priceUSD: null,
     images: ["/img/catalog/hikari-stone/01.png"],
     driveFolderId: "1djPb8BSPESPq6mqVUYiaY249ivN47iny",
-  },
-  {
-    slug: "hikari-server-and-cup",
-    number: 10,
-    name: "Hikari Server & Cup",
-    collection: "hikari",
-    detail: "Glass · pitcher + cup set",
-    priceUSD: null,
-    images: ["/img/catalog/hikari-server-and-cup/01.png"],
-    driveFolderId: "1MQSdDUWYE6GSp8PTMnlY1unnGPpwXuoO",
-  },
-  {
-    slug: "hikari-retro-wave",
-    number: 11,
-    name: "Hikari Cup",
-    subline: "Retro Wave",
-    collection: "hikari",
-    detail: "Glass · waveform",
-    priceUSD: null,
-    images: [],
-    placeholder: true,
-    driveFolderId: "1R1SPCJearlh1KlDSwaUa9sBiWOX9l_cU",
   },
   {
     slug: "hikari-polkadot",
@@ -185,16 +158,6 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     driveFolderId: "1rZiSrvhmU9-SWp-F2zsAzuLyDJXRUOYS",
   },
   {
-    slug: "hikari-katakuchi-chasen-holder",
-    number: 24,
-    name: "Hikari Katakuchi & Chasen Holder Set",
-    collection: "hikari",
-    detail: "Glass · spouted bowl + whisk holder",
-    priceUSD: null,
-    images: ["/img/catalog/hikari-katakuchi-chasen-holder/01.jpg"],
-    driveFolderId: "16biIYGv1FdJfQ6pZujwp2FVOvtbKD1iO",
-  },
-  {
     slug: "hikari-starry-cup",
     number: 26,
     name: "Hikari Starry Cup",
@@ -204,28 +167,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     images: ["/img/catalog/hikari-starry-cup/01.png"],
     driveFolderId: "1XmupBxOWycWTBZ-hnrB6x4Gdi7tbnF3z",
   },
-  {
-    slug: "hikari-katakuchi-glass-set",
-    number: 32,
-    name: "Hikari Katakuchi Holder Glass Set",
-    collection: "hikari",
-    detail: "Glass · spouted bowl + holder set",
-    priceUSD: null,
-    images: ["/img/catalog/hikari-katakuchi-glass-set/01.png"],
-    driveFolderId: "10HWJOqeqKCiENeeEGt8KL88JMJOyeZ-N",
-  },
-  {
-    slug: "hikari-clear-pastel-server",
-    name: "Hikari Server",
-    subline: "Clear Pastel",
-    collection: "hikari",
-    detail: "Glass · pitcher",
-    priceUSD: null,
-    images: ["/img/catalog/hikari-clear-pastel-server/01.jpg"],
-    driveFolderId: "1BLQ1FhOoxCJ7gmQuZKzOgKaShIFQW3aN",
-  },
 
-  // OBORO — 22 products
+  // OBORO — 12 products
   {
     slug: "oboro-pastel-series",
     number: 6,
@@ -249,18 +192,6 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     driveFolderId: "11JkvvF8yzUXrQPt8tNEiTZTcoFrJ-Ezx",
   },
   {
-    slug: "oboro-yuki-chawan",
-    number: 8,
-    name: "Oboro Chawan",
-    subline: "Yuki Series",
-    collection: "oboro",
-    detail: "Ceramic · snow glaze chawan",
-    priceUSD: null,
-    images: [],
-    placeholder: true,
-    driveFolderId: "1lSr9Y3DVWWLxXOpsV9XO_-wi_H5akjsa",
-  },
-  {
     slug: "oboro-chasen-naoshi",
     number: 12,
     name: "Oboro Chasen Naoshi",
@@ -279,28 +210,6 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     priceUSD: null,
     images: ["/img/catalog/oboro-egg-mug-coaster/01.png"],
     driveFolderId: "1G1LSHbZWh6iqX3o0UVqUbeTrLU_rbP1j",
-  },
-  {
-    slug: "oboro-katakuchi-glaze",
-    number: 14,
-    name: "Oboro Katakuchi",
-    subline: "Glaze Series",
-    collection: "oboro",
-    detail: "Ceramic · spouted matcha bowl",
-    priceUSD: null,
-    images: [],
-    placeholder: true,
-    driveFolderId: "1amXAkLbjqDvXku-Cexp9HYHyjpx-EMDj",
-  },
-  {
-    slug: "oboro-katakuchi-chasen-holder",
-    number: 15,
-    name: "Oboro Katakuchi & Chasen Holder",
-    collection: "oboro",
-    detail: "Ceramic · matcha set",
-    priceUSD: null,
-    images: ["/img/catalog/oboro-katakuchi-chasen-holder/01.png"],
-    driveFolderId: "1A_2TPu1OQLeF1-Sgg1ZHky2tLPuEdWdA",
   },
   {
     slug: "oboro-egg-cup",
@@ -356,18 +265,6 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     driveFolderId: "107fdHYC83W4wm8aI-MFYGBN2xKnjnk9A",
   },
   {
-    slug: "oboro-donut-chasen-naoshi",
-    number: 33,
-    name: "Oboro Donut Chasen Naoshi",
-    subline: "Round Model",
-    collection: "oboro",
-    detail: "Ceramic · round whisk holder",
-    priceUSD: null,
-    images: [],
-    placeholder: true,
-    driveFolderId: "1oUPUSip0jYAHK6UCBWvJWASnHUYejEvt",
-  },
-  {
     slug: "oboro-gingko-saucer",
     number: 34,
     name: "Oboro Gingko Saucer",
@@ -397,66 +294,6 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     images: ["/img/catalog/oboro-two-tone-cup/01.png"],
     driveFolderId: "1WPUEeEZE79R1xK8MLJB4ob3kTQSpp2L0",
   },
-  {
-    slug: "oboro-shizen-tasting-strainer",
-    name: "Oboro Shizen Tasting Cup",
-    subline: "with Strainer",
-    collection: "oboro",
-    detail: "Ceramic · tea cup with strainer",
-    priceUSD: null,
-    images: ["/img/catalog/oboro-shizen-tasting-strainer/01.png"],
-    driveFolderId: "1I5DLRknmgr3lqYnPZ72zdtJtrwCTgT__",
-  },
-  {
-    slug: "oboro-single-tea-pastel",
-    name: "Oboro Single Tea Cup",
-    subline: "Pastel Series",
-    collection: "oboro",
-    detail: "Ceramic · solo cup",
-    priceUSD: null,
-    images: ["/img/catalog/oboro-single-tea-pastel/01.jpg"],
-    driveFolderId: "1YR5Xgn9NNYWit_bqNx6VGOICuHNaX2IS",
-  },
-  {
-    slug: "oboro-textured-pattern",
-    name: "Oboro Coffee Cup & Saucer",
-    subline: "Textured Pattern",
-    collection: "oboro",
-    detail: "Ceramic · textured cup + saucer",
-    priceUSD: null,
-    images: ["/img/catalog/oboro-textured-pattern/01.jpg"],
-    driveFolderId: "1pkLpSQcZjmACWUo7EomHQUe_BLT0PNYW",
-  },
-  {
-    slug: "oboro-artisan-espresso",
-    name: "Oboro Espresso Tasting Cup",
-    subline: "Artisan",
-    collection: "oboro",
-    detail: "Ceramic · espresso cup",
-    priceUSD: null,
-    images: ["/img/catalog/oboro-artisan-espresso/01.jpg"],
-    driveFolderId: "1g-xrzVONJCWHuVdRepOpPmA99LtbrIPj",
-  },
-  {
-    slug: "oboro-speckled-matcha-cup",
-    name: "Oboro Matcha Coffee Cup",
-    subline: "Speckled",
-    collection: "oboro",
-    detail: "Ceramic · speckled glaze",
-    priceUSD: null,
-    images: ["/img/catalog/oboro-speckled-matcha-cup/01.jpg"],
-    driveFolderId: "1mMJntsd5T0a-5iZpOVMQCEniR8x_lV6N",
-  },
-  {
-    slug: "oboro-marble-glaze-cup",
-    name: "Oboro Coffee Cup",
-    subline: "Marble Glaze",
-    collection: "oboro",
-    detail: "Ceramic · marble-effect glaze",
-    priceUSD: null,
-    images: ["/img/catalog/oboro-marble-glaze-cup/01.jpg"],
-    driveFolderId: "1b1tVBIQSqptioFDrRzFY_dmalpPEP-29",
-  },
 
   // TAKE — 1 product
   {
@@ -470,17 +307,7 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     driveFolderId: "1Z-VZojAUZVC60xbkDl3Whk_e6LwcnBPq",
   },
 
-  // HAGANE — 5 products
-  {
-    slug: "hagane-matcha-canister",
-    number: 16,
-    name: "Hagane Matcha Canister",
-    collection: "hagane",
-    detail: "Steel · airtight canister",
-    priceUSD: null,
-    images: ["/img/catalog/hagane-matcha-canister/01.jpg"],
-    driveFolderId: "1qbey9PrQMM537CKCsod_T7I61Ad73qu-",
-  },
+  // HAGANE — 3 products
   {
     slug: "hagane-matcha-canister-sifter",
     name: "Hagane Airtight Matcha Canister",
@@ -510,38 +337,6 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     priceUSD: null,
     images: ["/img/catalog/hagane-pebble-chakoshi/01.png"],
     driveFolderId: "1uYG2r1KInf1K3ILLY-GolJIIvY-G2CyW",
-  },
-  {
-    slug: "hagane-teaspoon",
-    number: 35,
-    name: "Hagane Teaspoon",
-    collection: "hagane",
-    detail: "Steel · teaspoon",
-    priceUSD: null,
-    images: ["/img/catalog/hagane-teaspoon/01.png"],
-    driveFolderId: "1CbEl5zIRYlQmT0JrLmPetM8q1I7vaVYu",
-  },
-
-  // MORI — 1 product
-  {
-    slug: "mori-matcha-bowl-chasen-set",
-    name: "Mori Matcha Bowl & Chasen Set",
-    collection: "mori",
-    detail: "Wood + bamboo · matcha set",
-    priceUSD: null,
-    images: ["/img/catalog/mori-matcha-bowl-chasen-set/01.jpg"],
-    driveFolderId: "1XsNhahMYxh2C5XETBUKB3Vk8EstZh9l7",
-  },
-
-  // YUGEN — 1 product
-  {
-    slug: "yugen-coffee-cup-saucer",
-    name: "Yugen Coffee Cup & Saucer Set",
-    collection: "yugen",
-    detail: "Ceramic · premium cup + saucer",
-    priceUSD: null,
-    images: ["/img/catalog/yugen-coffee-cup-saucer/01.jpg"],
-    driveFolderId: "1vnPhe8xIbhiBAuzeeZBflg_sfLLJt_C8",
   },
 ];
 

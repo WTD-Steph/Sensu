@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Orbit, Hatch, Loop, Syntax, Echo, Pulse } from "@/components/motifs";
+import { Orbit, Hatch, Loop, Syntax } from "@/components/motifs";
 import { COLLECTIONS, type Collection } from "@/content/collections";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
@@ -10,7 +10,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
  *   HIKARI  → Orbit   (light, radiance)
  *   OBORO   → Hatch   (haze)
  *   TAKE    → Loop    (organic)
- *   TAKUMI  → Syntax  (craft, precision)
+ *   HAGANE  → Syntax  (craft, precision)
  *
  * Kanji set in Noto Serif JP at large scale, low opacity, behind the
  * latin name.
@@ -100,16 +100,12 @@ function CollectionMotif({ id }: { id: Collection["id"] }) {
       return <Loop className="h-full w-full" />;
     case "hagane":
       return <Syntax className="h-full w-full" fillClassName="text-marble" hatchClassName="text-whim" />;
-    case "mori":
-      return <Echo direction="out" steps={7} className="h-full w-full" />;
-    case "yugen":
-      return <Pulse direction="horizontal" className="h-full w-full" />;
   }
 }
 
 /**
  * Per-collection color palette. Each card uses exactly one primary
- * (or pure neutrals for TAKUMI), paired with Void/Whim. Brand rule
+ * (or pure neutrals for HAGANE), paired with Void/Whim. Brand rule
  * honoured: no two primaries on a single surface.
  */
 const PALETTES: Record<
@@ -154,24 +150,6 @@ const PALETTES: Record<
   hagane: {
     surface: "bg-void-soft text-whim",
     motif: "text-marble",
-    kanji: "text-whim",
-    eyebrow: "text-whim",
-    heading: "text-whim",
-    body: "text-whim",
-    link: "text-whim border-whim/40 hover:text-lumen hover:border-lumen",
-  },
-  mori: {
-    surface: "bg-whim-warm text-void",
-    motif: "text-marble",
-    kanji: "text-marble",
-    eyebrow: "text-marble",
-    heading: "text-void",
-    body: "text-void/80",
-    link: "text-void border-void/40 hover:text-marble hover:border-marble",
-  },
-  yugen: {
-    surface: "bg-marble text-whim",
-    motif: "text-whim",
     kanji: "text-whim",
     eyebrow: "text-whim",
     heading: "text-whim",

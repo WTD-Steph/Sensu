@@ -1,24 +1,18 @@
 /**
- * The Sensu collections. Six product lines that map to the real catalog
- * in Google Drive (folder `1f_cm9kFOOEK3TpFcrH8zEovPPGYiGyf0`).
+ * The Sensu collections. Four material-based product lines mapped to
+ * the live catalog in Google Drive (folder
+ * `1f_cm9kFOOEK3TpFcrH8zEovPPGYiGyf0`).
  *
- * Brand book originally listed four (HIKARI / OBORO / TAKE / TAKUMI).
- * The live product line has grown to six material-based collections —
- * HAGANE (steel), MORI (forest/wood), and YUGEN (premium / subtle depth)
- * joined the family. TAKUMI from the brand book was an aspirational
- * "premium / mixed materials" umbrella; YUGEN is the actual premium line.
+ * HIKARI (glass · light), OBORO (ceramic · haze), TAKE (bamboo ·
+ * nature), HAGANE (steel · precision). This is the brand-book lineup;
+ * earlier MORI and YUGEN drafts were pulled to keep the visual line
+ * consistent with the Brand Book.
  *
  * Each collection gets a distinct surface colour and motif so the
- * Collections section reads as six cards without mixing primaries on
- * any single surface (per brand-book rule).
+ * Collections section reads as four cards without mixing primaries
+ * on any single surface (per brand-book rule).
  */
-export type CollectionId =
-  | "hikari"
-  | "oboro"
-  | "take"
-  | "hagane"
-  | "mori"
-  | "yugen";
+export type CollectionId = "hikari" | "oboro" | "take" | "hagane";
 
 export type Collection = {
   id: CollectionId;
@@ -31,7 +25,7 @@ export type Collection = {
   /** Paragraph for the collection card. */
   description: string;
   /** Motif assigned to this collection's card. One motif per collection. */
-  motif: "orbit" | "hatch" | "loop" | "syntax" | "echo" | "pulse";
+  motif: "orbit" | "hatch" | "loop" | "syntax";
   /** Anchor link to the deep-dive section on the home page. */
   href: string;
 };
@@ -76,25 +70,5 @@ export const COLLECTIONS: ReadonlyArray<Collection> = [
       "Brushed stainless steel for canisters, sifters, and tools. Quiet weight in the hand. Made to last decades, not seasons.",
     motif: "syntax",
     href: "/shop?collection=hagane",
-  },
-  {
-    id: "mori",
-    name: "MORI",
-    kanji: "森",
-    tag: "Wood · forest",
-    description:
-      "Hand-turned wood pieces — bowls, trays, holders. Grain-led, warm to touch, slow to age.",
-    motif: "echo",
-    href: "/shop?collection=mori",
-  },
-  {
-    id: "yugen",
-    name: "YUGEN",
-    kanji: "幽玄",
-    tag: "Premium · subtle depth",
-    description:
-      "The premium line. Editorial, considered, and a touch playful. Pieces that hold a quiet kind of presence.",
-    motif: "pulse",
-    href: "/shop?collection=yugen",
   },
 ];

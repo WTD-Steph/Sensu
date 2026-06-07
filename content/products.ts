@@ -95,16 +95,6 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     image: "/img/social/bundle.jpg",
     placeholder: true,
   },
-  {
-    id: "yugen-set",
-    name: "Yugen Premium Set",
-    collection: "yugen",
-    blurb: "A premium editorial set, mixing materials with intention.",
-    detail: "Mixed materials · premium",
-    priceUSD: 45,
-    image: "/img/social/bts-tray.jpg",
-    placeholder: true,
-  },
 ];
 
 /** Format a USD price for display, e.g. "$17". */

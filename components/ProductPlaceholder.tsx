@@ -8,7 +8,7 @@ import { Orbit } from "@/components/motifs";
  * subtle Orbit pattern in a corner.
  *
  * Surface colour tracks the collection so the placeholder still reads
- * as "a HIKARI product" / "a YUGEN product" even without a real photo.
+ * as "a HIKARI product" / "a HAGANE product" even without a real photo.
  */
 type ProductPlaceholderProps = {
   collection: CollectionId;
@@ -24,8 +24,6 @@ const SURFACE: Record<CollectionId, { bg: string; text: string; kanji: string }>
   oboro: { bg: "bg-marble", text: "text-whim", kanji: "text-whim/15" },
   take: { bg: "bg-void", text: "text-whim", kanji: "text-whim/12" },
   hagane: { bg: "bg-void-soft", text: "text-whim", kanji: "text-whim/15" },
-  mori: { bg: "bg-whim-warm", text: "text-void", kanji: "text-void/12" },
-  yugen: { bg: "bg-marble", text: "text-whim", kanji: "text-whim/15" },
 };
 
 export function ProductPlaceholder({

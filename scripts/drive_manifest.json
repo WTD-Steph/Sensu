@@ -1,12 +1,10 @@
 {
-  "_doc": "Maps Drive file IDs → catalog product slug + image index. Populated as C3 downloads come in. The decoder script auto-detects PNG/JPEG and writes to public/img/catalog/{slug}/{NN}.{ext}.",
+  "_doc": "Maps Drive file IDs → catalog product slug + image index. Cleaned June 2026 — entries for products dropped during the visual-consistency cleanup were removed. Only entries that match the live CATALOG remain.",
   "mappings": {
     "1MbX5vNM4A0DLtox80oc8sVBtwAd4vlDS": { "slug": "hikari-rain-pattern", "index": 1 },
     "1DL0okvNga6How9wsgDHAN1KFZoOe2NRe": { "slug": "hikari-3d-mountain", "index": 1 },
     "1JsA2jz5I6UZvlT9BjP1_9sb7h5OImuJu": { "slug": "hikari-spinning-glass", "index": 1 },
-    "1eNXn6xa5dg-UfgwAAI9l0ab4K696kMH_": { "slug": "hikari-shot-glass-w40", "index": 1 },
     "1zgxAQt1A7j_XGY6CfZMv82FMZS_AqVMU": { "slug": "hikari-stone", "index": 1 },
-    "1-81QaWIK3X5h_ggV6q8q5EJKlMrc4Odi": { "slug": "hikari-server-and-cup", "index": 1 },
     "1m1ytIVxriedGC4kNoQA7i-u4ToAaFACW": { "slug": "hikari-polkadot", "index": 1 },
     "1YCdPeLEPxzrw6VYPsMwfkUwKdWNaDx0V": { "slug": "hikari-frosted-gradient", "index": 1 },
     "1_vqNGj2W3I3wyf6C4bYfyufVifWm1tuL": { "slug": "hikari-retro-glass-spoon", "index": 1 },
@@ -23,26 +21,12 @@
     "11QiBeuVEyhVXcnXJo4t4LWCWwNvLjsL5": { "slug": "oboro-tumbler", "index": 1 },
     "1_hfs9WS2Gjx7OC-yqc26_Us600HSKJG4": { "slug": "oboro-tumbler-ceramic-cup", "index": 1 },
     "1kfOrszxlpqxhXVznKw5PX3kXx2DjLs5d": { "slug": "oboro-strawberry-matcha-set", "index": 1 },
-    "1Wc4cVTZOe6N6-G1pY2oyHbZxMupYqjos": { "slug": "hagane-matcha-canister-sifter", "index": 1 },
-    "1CYSxENJUqQdsn_qW_YrjHG6r7flQvWLf": { "slug": "hagane-modern-cup-saucer", "index": 1 },
-    "1yVyMuZIpiHifMUE6KOzggtV-UiOkgFHZ": { "slug": "hagane-pebble-chakoshi", "index": 1 },
-    "18_OvTRMHartO1n17Xm45ENk8_k2lP_Un": { "slug": "hagane-matcha-canister", "index": 1 },
-    "14_1PAOAfeTc59SURnUbglcyoum21hxk-": { "slug": "hagane-teaspoon", "index": 1 },
-    "1j4X6Vgew0zrry_E_MysQ_3mQCchpmCcL": { "slug": "mori-matcha-bowl-chasen-set", "index": 1 },
-    "1CKbQDXt14G70bAuVRofrfklcc6VtZVih": { "slug": "yugen-coffee-cup-saucer", "index": 1 },
     "1Wy3QqQrqqc1BPBcSiBZ__82QYj3NbJSe": { "slug": "oboro-gingko-saucer", "index": 1 },
     "18AYGQGSUgd6X5AlrhcIS-AZbH0HwNyiO": { "slug": "oboro-colorful-gradient", "index": 1 },
     "1fg92DJXKPqPlHEfGqYaKKGzeI-cDsqcX": { "slug": "oboro-two-tone-cup", "index": 1 },
     "11DXSJruCIIDWjXiDmf5nRsZPXBu9BjJ1": { "slug": "take-chasen", "index": 1 },
-    "1tOdpmvExb-g2CvOx_XKsb11izSyMYocQ": { "slug": "hikari-katakuchi-glass-set", "index": 1 },
-    "18gk_s6Y4w6C74sxTipD5XblyJOe24OjR": { "slug": "hikari-katakuchi-chasen-holder", "index": 1 },
-    "1mVKX-X-g6q5J1JzT-DpcFolIWBd90mfB": { "slug": "hikari-clear-pastel-server", "index": 1 },
-    "1J8nQ08C-Ok6OOlfQKGyS8VsEKWbUsovE": { "slug": "oboro-textured-pattern", "index": 1 },
-    "1MAimcmX2-Nz-xYf_o7tShZaYuUZLDJIm": { "slug": "oboro-artisan-espresso", "index": 1 },
-    "1SNfgfBtQ0XsbkJ54M4Fz-Q94ezB22QAu": { "slug": "oboro-speckled-matcha-cup", "index": 1 },
-    "1poWZfL8P2d0iAQVdU9kB_L0HWZbghuxx": { "slug": "oboro-marble-glaze-cup", "index": 1 },
-    "1IZd1jAPUoo19WBhCsqwAOcGPqnfkEZze": { "slug": "oboro-katakuchi-chasen-holder", "index": 1 },
-    "1-uFlMRI7M2Y9B_x-LMrSux2ukgEad1Nx": { "slug": "oboro-shizen-tasting-strainer", "index": 1 },
-    "1Bew84OtZhnLTNAQVvGf9OrzRgZYyQEUm": { "slug": "oboro-single-tea-pastel", "index": 1 }
+    "1Wc4cVTZOe6N6-G1pY2oyHbZxMupYqjos": { "slug": "hagane-matcha-canister-sifter", "index": 1 },
+    "1CYSxENJUqQdsn_qW_YrjHG6r7flQvWLf": { "slug": "hagane-modern-cup-saucer", "index": 1 },
+    "1yVyMuZIpiHifMUE6KOzggtV-UiOkgFHZ": { "slug": "hagane-pebble-chakoshi", "index": 1 }
   }
 }

@@ -9,7 +9,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "The Sensu catalog — glass, ceramic, bamboo, steel, wood. Six collections of contemporary drinkware and tea tools.",
+    "The Sensu catalog — glass, ceramic, bamboo, steel. Four collections of contemporary drinkware and tea tools.",
   alternates: { canonical: "/shop" },
 };
 
@@ -67,7 +67,7 @@ export default function ShopPage({
             )}
             <p className="mt-6 max-w-[58ch] text-body-lg text-void/70">
               {meta?.description ??
-                "Six collections, forty-seven pieces. Filter by material to find what fits your morning."}
+                "Four collections, twenty-seven pieces. Filter by material to find what fits your morning."}
             </p>
           </div>
         </section>

@@ -161,9 +161,9 @@ function StoryBody() {
               body="Cut from fine bamboo by hand. The chasen creates smooth, frothy matcha — the same way it has for centuries."
             />
             <Material
-              kanji="匠 · Takumi"
-              title="Craft holds intention."
-              body="Our premium line: mixed materials, considered details. A tribute to the care and craft behind each form."
+              kanji="鋼 · Hagane"
+              title="Steel holds precision."
+              body="Brushed stainless steel for canisters, sifters, and tools. Quiet weight in the hand. Made to last decades, not seasons."
             />
           </ul>
         </div>

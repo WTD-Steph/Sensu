@@ -100,9 +100,9 @@ const MATERIALS = [
     line: "Whisks and tools that do their job without asking for attention.",
   },
   {
-    kanji: "匠 · Takumi",
-    title: "Craft holds intention.",
-    line: "Editorial premium pieces — the line where care becomes form.",
+    kanji: "鋼 · Hagane",
+    title: "Steel holds precision.",
+    line: "Brushed stainless steel canisters and tools — quiet weight, made to last decades.",
   },
 ];
 
