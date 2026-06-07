@@ -9,8 +9,8 @@ import { easeSensu } from "@/lib/motion";
 /* eslint-disable @next/next/no-img-element */
 
 const NAV_LINKS = [
+  { href: "/shop", label: "Shop" },
   { href: "/story", label: "Story" },
-  { href: "/#collections", label: "Collections" },
   { href: "/ritual", label: "Ritual" },
   { href: "/lookbook", label: "Lookbook" },
 ] as const;
