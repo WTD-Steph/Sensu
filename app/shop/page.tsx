@@ -4,6 +4,7 @@ import { COLLECTIONS, type CollectionId } from "@/content/collections";
 import { ProductCatalogCard } from "@/components/ProductCatalogCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export const metadata: Metadata = {
   title: "Shop",
@@ -48,9 +49,9 @@ export default function ShopPage({
         {/* HERO */}
         <section className="pt-section">
           <div className="mx-auto max-w-page px-gutter">
-            <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+            <Eyebrow className="mb-4">
               Shop · 店
-            </p>
+            </Eyebrow>
             {meta ? (
               <h1 className="max-w-[20ch] text-display font-bold leading-[0.95]">
                 {meta.name}{" "}

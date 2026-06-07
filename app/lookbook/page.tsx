@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export const metadata: Metadata = {
   title: "Lookbook",
@@ -92,9 +93,9 @@ function LookbookBody() {
       {/* HERO */}
       <section className="pt-section">
         <div className="mx-auto max-w-page px-gutter">
-          <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+          <Eyebrow className="mb-4">
             Lookbook · 写真集
-          </p>
+          </Eyebrow>
           <h1 className="max-w-[18ch] text-display font-bold leading-[0.95]">
             Quiet pieces,{" "}
             <em className="font-light italic text-marble">

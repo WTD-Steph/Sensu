@@ -1,6 +1,7 @@
 import { InstagramGrid } from "@/components/InstagramGrid";
 import { Loop } from "@/components/motifs";
 import { IG_URL } from "@/lib/links";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 /**
  * Sensu Circle — §5.7 of the brief. Community section anchored on
@@ -24,9 +25,9 @@ export function SensuCircle() {
       <div className="relative mx-auto max-w-page px-gutter">
         <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-[1.2fr_1fr]">
           <div>
-            <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+            <Eyebrow className="mb-4">
               Sensu Circle
-            </p>
+            </Eyebrow>
             <h2 className="text-h2 font-bold">
               Where movement{" "}
               <em className="font-light italic text-marble">

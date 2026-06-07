@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Orbit, Hatch, Loop, Syntax, Echo, Pulse } from "@/components/motifs";
 import { COLLECTIONS, type Collection } from "@/content/collections";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 /**
  * Collections section (§5.4 of the rebuild brief).
@@ -19,9 +20,9 @@ export function Collections() {
     <section id="collections" className="py-section">
       <div className="mx-auto max-w-page px-gutter">
         <header className="mb-12 max-w-3xl">
-          <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+          <Eyebrow className="mb-4">
             Collections
-          </p>
+          </Eyebrow>
           <h2 className="text-h2 font-bold">
             Form follows{" "}
             <em className="font-light italic text-marble">function.</em>

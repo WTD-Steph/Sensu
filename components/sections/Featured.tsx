@@ -1,6 +1,7 @@
 import { ProductCard } from "@/components/ProductCard";
 import { PRODUCTS } from "@/content/products";
 import { WHATSAPP_URL } from "@/lib/links";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 /**
  * Featured pieces. Renders up to 8 entries from content/products.ts.
@@ -13,9 +14,9 @@ export function Featured() {
     <section id="products" className="bg-whim py-section">
       <div className="mx-auto max-w-page px-gutter">
         <header className="mb-12 max-w-3xl">
-          <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+          <Eyebrow className="mb-4">
             Product highlight · 01
-          </p>
+          </Eyebrow>
           <h2 className="text-h2 font-bold">
             Beautifully crafted,{" "}
             <em className="font-light italic text-marble">

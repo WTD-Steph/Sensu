@@ -13,6 +13,7 @@ import { ProductCatalogCard } from "@/components/ProductCatalogCard";
 import { Button } from "@/components/ui/Button";
 import { WHATSAPP_URL } from "@/lib/links";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function generateStaticParams() {
   return CATALOG.map((p) => ({ slug: p.slug }));
@@ -91,7 +92,7 @@ export default function ProductDetailPage({
 
               {/* Meta */}
               <div className="flex flex-col">
-                <p className="text-caption font-semibold uppercase tracking-eyebrow text-marble">
+                <Eyebrow>
                   {collection.name}{" "}
                   <span className="font-jp opacity-70">
                     {collection.kanji}
@@ -101,7 +102,7 @@ export default function ProductDetailPage({
                       {" "}· {product.subline}
                     </span>
                   ) : null}
-                </p>
+                </Eyebrow>
                 <h1 className="mt-3 text-h1 font-bold leading-tight">
                   {product.name}
                 </h1>
@@ -110,9 +111,9 @@ export default function ProductDetailPage({
                 </p>
 
                 <dl className="mt-8 grid grid-cols-[120px_1fr] gap-x-6 gap-y-3 border-t border-black/10 pt-6 text-[14px]">
-                  <dt className="text-caption uppercase tracking-eyebrow text-void/55">Material</dt>
+                  <Eyebrow as="dt" weight="regular" color="void-dim">Material</Eyebrow>
                   <dd className="text-void">{product.detail}</dd>
-                  <dt className="text-caption uppercase tracking-eyebrow text-void/55">Collection</dt>
+                  <Eyebrow as="dt" weight="regular" color="void-dim">Collection</Eyebrow>
                   <dd className="text-void">
                     <Link
                       href={`/shop?collection=${collection.id}`}
@@ -122,7 +123,7 @@ export default function ProductDetailPage({
                     </Link>{" "}
                     <span className="font-jp text-void/55">{collection.kanji}</span>
                   </dd>
-                  <dt className="text-caption uppercase tracking-eyebrow text-void/55">Price</dt>
+                  <Eyebrow as="dt" weight="regular" color="void-dim">Price</Eyebrow>
                   <dd className="text-void">
                     {product.priceUSD != null ? (
                       <span className="font-semibold">{formatUSD(product.priceUSD)}</span>
@@ -164,9 +165,9 @@ export default function ProductDetailPage({
           <section className="py-section">
             <div className="mx-auto max-w-page px-gutter">
               <header className="mb-8">
-                <p className="text-caption font-semibold uppercase tracking-eyebrow text-marble">
+                <Eyebrow>
                   More from {collection.name}
-                </p>
+                </Eyebrow>
                 <h2 className="mt-2 text-h2 font-bold">
                   Companion{" "}
                   <em className="font-light italic text-marble">pieces.</em>

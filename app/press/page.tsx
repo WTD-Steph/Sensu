@@ -4,6 +4,7 @@ import { Orbit } from "@/components/motifs";
 import { Button } from "@/components/ui/Button";
 import { WHOLESALE_EMAIL } from "@/lib/links";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export const metadata: Metadata = {
   title: "Press kit",
@@ -73,9 +74,9 @@ function PressBody() {
         </div>
 
         <div className="mx-auto max-w-page px-gutter">
-          <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+          <Eyebrow className="mb-4">
             Press kit · プレス
-          </p>
+          </Eyebrow>
           <h1 className="max-w-[22ch] text-display font-bold leading-[0.95]">
             For press,{" "}
             <em className="font-light italic text-marble">stockists,</em> and
@@ -99,9 +100,9 @@ function PressBody() {
           <dl className="grid grid-cols-1 gap-x-12 gap-y-6 border-t border-black/10 pt-8 md:grid-cols-2">
             {FACTS.map((f) => (
               <div key={f.label} className="grid grid-cols-[200px_1fr] gap-6 border-b border-black/10 pb-6">
-                <dt className="text-caption uppercase tracking-eyebrow text-void/55">
+                <Eyebrow as="dt" weight="regular" color="void-dim">
                   {f.label}
-                </dt>
+                </Eyebrow>
                 <dd className="text-body-lg text-void">{f.value}</dd>
               </div>
             ))}

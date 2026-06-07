@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Echo } from "@/components/motifs";
 import { RITUAL_STEPS } from "@/content/ritual";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 /**
  * Ritual teaser — §5.6 of the brief. The full pillar lives at /ritual.
@@ -25,9 +26,9 @@ export function RitualTeaser() {
 
       <div className="mx-auto max-w-page px-gutter">
         <header className="mb-12 max-w-3xl">
-          <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+          <Eyebrow className="mb-4">
             Ritual · 抹茶
-          </p>
+          </Eyebrow>
           <h2 className="text-h2 font-bold">
             How to whisk matcha,{" "}
             <em className="font-light italic text-marble">the Sensu way.</em>

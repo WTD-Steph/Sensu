@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BrailleDecoder } from "@/components/BrailleDecoder";
 import { MotionToggle } from "@/components/MotionToggle";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { IG_URL, WHATSAPP_URL, WHOLESALE_EMAIL } from "@/lib/links";
 
 /**
@@ -96,9 +97,9 @@ function FooterCol({
 }) {
   return (
     <div className="flex flex-col gap-2.5">
-      <h3 className="mb-1 text-caption uppercase tracking-eyebrow text-whim/55">
+      <Eyebrow as="h3" weight="regular" color="whim-dim" className="mb-1">
         {heading}
-      </h3>
+      </Eyebrow>
       {children}
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
 import { IG_URL, WHOLESALE_EMAIL } from "@/lib/links";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -17,9 +18,9 @@ export function Newsletter() {
     <section id="newsletter" className="py-section">
       <div className="mx-auto max-w-page px-gutter">
         <header className="mb-12 max-w-3xl">
-          <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+          <Eyebrow className="mb-4">
             Stay in the circle
-          </p>
+          </Eyebrow>
           <h2 className="text-h2 font-bold">
             Quiet drops,{" "}
             <em className="font-light italic text-marble">
@@ -31,9 +32,9 @@ export function Newsletter() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {/* Follow */}
           <article className="flex flex-col rounded-card-lg border border-black/10 bg-whim p-7">
-            <p className="text-caption uppercase tracking-eyebrow text-marble">
+            <Eyebrow weight="regular">
               Follow
-            </p>
+            </Eyebrow>
             <h3 className="mt-2 text-h3 font-bold">@madebysensu</h3>
             <p className="mt-3 text-body text-void/70">
               The Sensu Circle on Instagram. Slow mornings, behind the scenes,
@@ -55,9 +56,9 @@ export function Newsletter() {
 
           {/* Wholesale & press */}
           <article className="flex flex-col rounded-card-lg border border-black/10 bg-whim p-7">
-            <p className="text-caption uppercase tracking-eyebrow text-marble">
+            <Eyebrow weight="regular">
               Wholesale & press
-            </p>
+            </Eyebrow>
             <h3 className="mt-2 text-h3 font-bold">Carry Sensu.</h3>
             <p className="mt-3 text-body text-void/70">
               For retail, press, or collaboration inquiries — drop us a line.
@@ -114,9 +115,9 @@ function SubscribeCard() {
 
   return (
     <article className="relative flex flex-col rounded-card-lg bg-void p-7 text-whim">
-      <p className="text-caption uppercase tracking-eyebrow text-whim/60">
+      <Eyebrow weight="regular" color="whim-dim">
         Join the circle
-      </p>
+      </Eyebrow>
       <h3 className="mt-2 text-h3 font-bold">One email a month.</h3>
       <p className="mt-3 text-body text-whim/75">
         Quiet drops, slow mornings, and the spaces in between. No clutter.

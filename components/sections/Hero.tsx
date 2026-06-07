@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Orbit } from "@/components/motifs";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 /**
  * Hero — Act 1 (the part above the fold).
@@ -22,9 +23,9 @@ export function Hero() {
 
       <div className="mx-auto grid max-w-page grid-cols-1 items-center gap-12 px-gutter md:grid-cols-[1.05fr_1fr] md:gap-[clamp(28px,5vw,72px)]">
         <div>
-          <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+          <Eyebrow className="mb-4">
             Sensu · センス
-          </p>
+          </Eyebrow>
           <h1 className="mb-6 text-display font-bold lowercase">
             rituals{" "}
             <em className="font-light not-italic italic text-marble">worth</em>{" "}

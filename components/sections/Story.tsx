@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Loop } from "@/components/motifs";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 /**
  * Story section (§5.2 of the rebuild brief).
@@ -18,9 +19,9 @@ export function Story() {
         {/* ORIGIN */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1fr_1.2fr]">
           <div>
-            <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+            <Eyebrow className="mb-4">
               About the brand
-            </p>
+            </Eyebrow>
             <h2 className="text-h2 font-bold">
               A quiet confidence in{" "}
               <em className="font-light italic text-marble">
@@ -55,9 +56,9 @@ export function Story() {
               key={m.title}
               className="rounded-card border border-black/10 bg-whim p-6 transition-colors duration-300 ease-sensu hover:border-void/30"
             >
-              <p className="text-caption uppercase tracking-eyebrow text-marble">
+              <Eyebrow weight="regular">
                 {m.kanji}
-              </p>
+              </Eyebrow>
               <h3 className="mt-2 text-h3 font-bold">{m.title}</h3>
               <p className="mt-2 text-body text-void/70">{m.line}</p>
             </article>
@@ -115,9 +116,9 @@ function PhilosophyBlock() {
       >
         <Loop className="h-full w-full" />
       </div>
-      <p className="text-caption uppercase tracking-eyebrow text-whim/60">
+      <Eyebrow weight="regular" color="whim-dim">
         Philosophy
-      </p>
+      </Eyebrow>
       <p className="mt-4 max-w-4xl text-h2 font-light leading-[1.1]">
         Form follows function. The most meaningful things are not always the
         loudest — sometimes they are the ones you have to{" "}
@@ -144,9 +145,9 @@ function Stat({ number, label }: { number: string; label: string }) {
         <span className="block text-display font-bold leading-none text-marble">
           {number}
         </span>
-        <span className="mt-3 block text-caption uppercase tracking-eyebrow text-void/60">
+        <Eyebrow as="span" weight="regular" color="void-dim" className="mt-3 block">
           {label}
-        </span>
+        </Eyebrow>
       </dd>
     </div>
   );

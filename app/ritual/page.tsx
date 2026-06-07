@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { RITUAL_STEPS } from "@/content/ritual";
 import { WHATSAPP_URL } from "@/lib/links";
 import { breadcrumbJsonLd, howToMatchaJsonLd, jsonLdScript } from "@/lib/jsonld";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export const metadata: Metadata = {
   title: "How to whisk matcha, the Sensu way",
@@ -51,9 +52,9 @@ function RitualPageBody() {
         </div>
 
         <div className="mx-auto max-w-page px-gutter">
-          <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+          <Eyebrow className="mb-4">
             Ritual · 抹茶
-          </p>
+          </Eyebrow>
           <h1 className="max-w-[20ch] text-display font-bold leading-[0.95]">
             How to whisk matcha,{" "}
             <em className="font-light italic text-marble">the Sensu way.</em>
@@ -87,9 +88,9 @@ function RitualPageBody() {
                   />
                 </figure>
                 <div>
-                  <p className="text-caption uppercase tracking-eyebrow text-marble">
+                  <Eyebrow weight="regular">
                     Step {step.number}
-                  </p>
+                  </Eyebrow>
                   <h2 className="mt-2 text-h2 font-bold">{step.title}</h2>
                   <p className="mt-4 text-body-lg text-void/75">
                     {step.detail}
@@ -104,9 +105,9 @@ function RitualPageBody() {
       {/* CLOSING */}
       <section className="bg-marble py-section text-whim">
         <div className="mx-auto max-w-page px-gutter text-center">
-          <p className="text-caption uppercase tracking-eyebrow text-whim/70">
+          <Eyebrow weight="regular" color="whim-dim">
             The tools you need
-          </p>
+          </Eyebrow>
           <h2 className="mx-auto mt-3 max-w-[22ch] text-h1 font-bold leading-tight">
             Begin with the{" "}
             <em className="font-light italic text-whim/80">bundle.</em>

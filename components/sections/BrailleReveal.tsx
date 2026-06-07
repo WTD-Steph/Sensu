@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BrailleDecoder } from "@/components/BrailleDecoder";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Pulse } from "@/components/motifs";
 
 /**
@@ -35,9 +36,9 @@ export function BrailleReveal() {
       </div>
 
       <div className="relative mx-auto max-w-page px-gutter text-center">
-        <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-whim/70">
+        <Eyebrow color="whim-dim" className="mb-4">
           sensu · noun · センス
-        </p>
+        </Eyebrow>
 
         <h2 className="mx-auto max-w-[14ch] text-display font-bold leading-[1.02]">
           Sense, written{" "}

@@ -4,6 +4,7 @@ import { BrailleDecoder } from "@/components/BrailleDecoder";
 import { Button } from "@/components/ui/Button";
 import { Orbit, Loop } from "@/components/motifs";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export const metadata: Metadata = {
   title: "Our story",
@@ -54,9 +55,9 @@ function StoryBody() {
         </div>
 
         <div className="mx-auto max-w-page px-gutter">
-          <p className="mb-4 text-caption font-semibold uppercase tracking-eyebrow text-marble">
+          <Eyebrow className="mb-4">
             Our story · 物語
-          </p>
+          </Eyebrow>
           <h1 className="max-w-[18ch] text-display font-bold leading-[0.95]">
             Sensu was born from a quiet{" "}
             <em className="font-light italic text-marble">question.</em>
@@ -135,9 +136,9 @@ function StoryBody() {
         </div>
 
         <div className="relative mx-auto max-w-page px-gutter">
-          <p className="text-caption uppercase tracking-eyebrow text-whim/60">
+          <Eyebrow weight="regular" color="whim-dim">
             Materials
-          </p>
+          </Eyebrow>
           <h2 className="mt-3 max-w-3xl text-h2 font-bold">
             Form follows function. The choice of material is{" "}
             <em className="font-light italic text-whim/80">never accidental.</em>
@@ -181,9 +182,9 @@ function StoryBody() {
       <section className="bg-whim-warm py-section">
         <div className="mx-auto flex max-w-page flex-col items-start gap-6 px-gutter md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-caption uppercase tracking-eyebrow text-marble">
+            <Eyebrow weight="regular">
               Begin the ritual
-            </p>
+            </Eyebrow>
             <h2 className="mt-2 text-h2 font-bold">
               Find your{" "}
               <em className="font-light italic text-marble">first piece.</em>
@@ -214,9 +215,9 @@ function Material({
 }) {
   return (
     <li className="border-l border-whim/20 pl-5">
-      <p className="text-caption uppercase tracking-eyebrow text-whim/55">
+      <Eyebrow weight="regular" color="whim-dim">
         {kanji}
-      </p>
+      </Eyebrow>
       <h3 className="mt-2 text-h3 font-bold">{title}</h3>
       <p className="mt-2 text-body text-whim/75">{body}</p>
     </li>
