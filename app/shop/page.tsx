@@ -67,7 +67,7 @@ export default function ShopPage({
             )}
             <p className="mt-6 max-w-[58ch] text-body-lg text-void/70">
               {meta?.description ??
-                "Four collections, twenty-eight pieces. Filter by material to find what fits your morning."}
+                "Four collections, twenty-four pieces. Filter by material to find what fits your morning."}
             </p>
           </div>
         </section>

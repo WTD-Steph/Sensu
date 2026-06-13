@@ -46,7 +46,7 @@ export type CatalogProduct = {
 };
 
 export const CATALOG: ReadonlyArray<CatalogProduct> = [
-  // HIKARI — 11 products
+  // HIKARI — 9 products
   {
     slug: "hikari-rain-pattern",
     number: 1,
@@ -79,17 +79,6 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     priceUSD: 28,
     images: ["/img/catalog/hikari-spinning-glass/01.png"],
     driveFolderId: "1ac1a2mC2B4IcQqLLCkU_P7X_cX4QlWvX",
-  },
-  {
-    slug: "hikari-stone",
-    number: 5,
-    name: "Hikari Cup",
-    subline: "Stone",
-    collection: "hikari",
-    detail: "Glass · stone texture",
-    priceUSD: 26,
-    images: ["/img/catalog/hikari-stone/01.png"],
-    driveFolderId: "1djPb8BSPESPq6mqVUYiaY249ivN47iny",
   },
   {
     slug: "hikari-polkadot",
@@ -157,18 +146,8 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     images: ["/img/catalog/hikari-retro-dessert-bowl/01.png"],
     driveFolderId: "1rZiSrvhmU9-SWp-F2zsAzuLyDJXRUOYS",
   },
-  {
-    slug: "hikari-starry-cup",
-    number: 26,
-    name: "Hikari Starry Cup",
-    collection: "hikari",
-    detail: "Glass · glittery finish",
-    priceUSD: 24,
-    images: ["/img/catalog/hikari-starry-cup/01.png"],
-    driveFolderId: "1XmupBxOWycWTBZ-hnrB6x4Gdi7tbnF3z",
-  },
 
-  // OBORO — 12 products
+  // OBORO — 10 products
   {
     slug: "oboro-pastel-series",
     number: 6,
@@ -210,16 +189,6 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     priceUSD: 26,
     images: ["/img/catalog/oboro-egg-mug-coaster/01.png"],
     driveFolderId: "1G1LSHbZWh6iqX3o0UVqUbeTrLU_rbP1j",
-  },
-  {
-    slug: "oboro-egg-cup",
-    number: 22,
-    name: "Oboro Egg Cup",
-    collection: "oboro",
-    detail: "Ceramic · small cup",
-    priceUSD: 18,
-    images: ["/img/catalog/oboro-egg-cup/01.png"],
-    driveFolderId: "1Gg1Vx7_Fhfb7rkT4SXTSZeRDH6w0jDf8",
   },
   {
     slug: "oboro-ring-mug",
@@ -273,16 +242,6 @@ export const CATALOG: ReadonlyArray<CatalogProduct> = [
     priceUSD: 20,
     images: ["/img/catalog/oboro-gingko-saucer/01.png"],
     driveFolderId: "1A1g-UCEyjmgMRJPRB_CmuoOALYB3kHg8",
-  },
-  {
-    slug: "oboro-colorful-gradient",
-    name: "Oboro Cup",
-    subline: "Colorful Gradient",
-    collection: "oboro",
-    detail: "Ceramic · gradient glaze",
-    priceUSD: 22,
-    images: ["/img/catalog/oboro-colorful-gradient/01.png"],
-    driveFolderId: "1RgnVZg3M6veFT9ICRMINe2p4neU4yIYv",
   },
   {
     slug: "oboro-two-tone-cup",
