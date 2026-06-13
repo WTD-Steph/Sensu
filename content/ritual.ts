@@ -51,6 +51,6 @@ export const RITUAL_STEPS: ReadonlyArray<RitualStep> = [
     blurb: "A light W-motion for 15–20 seconds, until soft foam appears.",
     detail:
       "Hold the chasen lightly, fingertips on the handle. Whisk in a quick W motion — wrist, not arm — for 15 to 20 seconds until a soft foam rises. Set the whisk down gently. The bowl is yours.",
-    image: "/img/social/take-chasen-hero.png",
+    image: "/img/social/matcha-ritual.jpg",
   },
 ];

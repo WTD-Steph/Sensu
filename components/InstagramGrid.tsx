@@ -15,11 +15,18 @@ type InstagramPost = {
  * place, the JSON is hand-curated from existing on-brand imagery.
  * Phase 4 wires up scripts/refresh-instagram.ts.
  */
-export function InstagramGrid({ limit = 6 }: { limit?: number }) {
+export function InstagramGrid({
+  limit = 6,
+  columns = 3,
+}: {
+  limit?: number;
+  columns?: 3 | 4;
+}) {
   const posts: InstagramPost[] = instagram.posts.slice(0, limit);
+  const gridCols = columns === 4 ? "md:grid-cols-4" : "md:grid-cols-3";
 
   return (
-    <ul className="grid grid-cols-2 gap-2 md:grid-cols-3">
+    <ul className={`grid grid-cols-2 gap-2 ${gridCols}`}>
       {posts.map((post, i) => (
         <li key={`${post.image}-${i}`} className="relative aspect-square">
           <a

@@ -58,7 +58,7 @@ export function SensuCircle() {
         </div>
 
         <div className="mt-12">
-          <InstagramGrid limit={6} />
+          <InstagramGrid limit={4} columns={4} />
         </div>
 
         <div className="mt-10 text-center">

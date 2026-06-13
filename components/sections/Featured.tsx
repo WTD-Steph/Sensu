@@ -1,15 +1,29 @@
-import { ProductCard } from "@/components/ProductCard";
-import { PRODUCTS } from "@/content/products";
+import { ProductCatalogCard } from "@/components/ProductCatalogCard";
+import { getCatalogProduct } from "@/content/catalog";
 import { WHATSAPP_URL } from "@/lib/links";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
 /**
- * Featured pieces. Renders up to 8 entries from content/products.ts.
- * Each card links into /shop?collection={c} so clicks drop the user
- * into the filtered catalog. C4 will swap this for a real catalog
- * picker.
+ * Featured pieces — eight hand-picked entries from the real catalog
+ * spanning all four collections, rendered with the same card as /shop
+ * so the homepage and the catalog share a single visual language.
  */
+const FEATURED_SLUGS = [
+  "hikari-3d-mountain",
+  "oboro-strawberry-matcha-set",
+  "take-chasen",
+  "hagane-matcha-canister-sifter",
+  "hikari-rain-pattern",
+  "oboro-pastel-series",
+  "hagane-modern-cup-saucer",
+  "hikari-polkadot",
+] as const;
+
 export function Featured() {
+  const products = FEATURED_SLUGS.map((slug) => getCatalogProduct(slug)).filter(
+    (p): p is NonNullable<typeof p> => p !== undefined,
+  );
+
   return (
     <section id="products" className="bg-whim py-section">
       <div className="mx-auto max-w-page px-gutter">
@@ -25,15 +39,17 @@ export function Featured() {
           </h2>
         </header>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {PRODUCTS.slice(0, 8).map((p) => (
-            <ProductCard key={p.id} product={p} />
+        <ul className="grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {products.map((p) => (
+            <li key={p.slug} className="flex">
+              <ProductCatalogCard product={p} />
+            </li>
           ))}
-        </div>
+        </ul>
 
         <p className="mt-12 text-center text-body text-void/65">
-          A selection from the Sensu line. Tap any piece to browse the
-          collection, or{" "}
+          A selection from the Sensu line. Tap any piece to view the
+          gallery, or{" "}
           <a
             href={WHATSAPP_URL}
             target="_blank"

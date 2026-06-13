@@ -1,5 +1,5 @@
 {
-  "_comment": "Static cache of @madebysensu posts. Refresh by pasting Meta oEmbed responses into `posts` — see scripts/refresh-instagram.ts.",
+  "_comment": "Static cache of @madebysensu posts. Refresh by pasting Meta oEmbed responses into `posts` — see scripts/refresh-instagram.ts. Lifestyle/BTS only; product-tile shots belong in /shop, not the Sensu Circle.",
   "posts": [
     {
       "permalink": "https://instagram.com/madebysensu",
@@ -20,16 +20,6 @@
       "permalink": "https://instagram.com/madebysensu",
       "image": "/img/social/tools-tray.jpg",
       "alt": "Tools laid out on a wooden tray"
-    },
-    {
-      "permalink": "https://instagram.com/madebysensu",
-      "image": "/img/products/hikari-hero.png",
-      "alt": "Hikari mountain rock glass"
-    },
-    {
-      "permalink": "https://instagram.com/madebysensu",
-      "image": "/img/social/take-chasen-hero.png",
-      "alt": "Take Shirotake bamboo whisk"
     }
   ]
 }
