@@ -39,9 +39,9 @@ const TILES: ReadonlyArray<{
     caption: "Behind the scene · OBORO",
   },
   {
-    src: "/img/products/hikari-cup.jpg",
-    alt: "Hikari clear glass cup",
-    caption: "HIKARI · Chawan",
+    src: "/img/products/hikari-hero.png",
+    alt: "Hikari mountain rock glass",
+    caption: "HIKARI · Mountain Rock",
   },
   {
     src: "/img/social/bts-tray.jpg",
@@ -54,9 +54,9 @@ const TILES: ReadonlyArray<{
     caption: "OBORO · Senchawan",
   },
   {
-    src: "/img/social/bundle.jpg",
-    alt: "Bundle tea set",
-    caption: "TAKE · Bundle",
+    src: "/img/social/take-chasen-hero.png",
+    alt: "Take Shirotake bamboo whisk",
+    caption: "TAKE · Shirotake",
   },
   {
     src: "/img/social/tools-tray.jpg",

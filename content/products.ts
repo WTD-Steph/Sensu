@@ -34,7 +34,7 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     blurb: "A clear glass cup that lets the colour and ritual of your drink shine.",
     detail: "Clear glass · handblown",
     priceUSD: 17,
-    image: "/img/products/hikari-cup.jpg",
+    image: "/img/products/hikari-hero.png",
   },
   {
     id: "oboro-senchawan",
@@ -52,7 +52,7 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     blurb: "Chasen, chawan, and matcha — everything you need to begin the ritual.",
     detail: "Chasen + chawan + matcha",
     priceUSD: 20,
-    image: "/img/social/bundle.jpg",
+    image: "/img/social/take-chasen-hero.png",
   },
   // Mentioned in the brief — image not yet supplied, so flagged as placeholder
   {
@@ -62,7 +62,7 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     blurb: "A handblown glass kettle with a minimal, fluted spout.",
     detail: "Glass · handblown",
     priceUSD: 20,
-    image: "/img/products/hikari-cup.jpg",
+    image: "/img/products/hikari-hero.png",
     placeholder: true,
   },
   {
@@ -92,7 +92,7 @@ export const PRODUCTS: ReadonlyArray<Product> = [
     blurb: "Crafted from fine bamboo for smooth, frothy matcha. Daily-ready.",
     detail: "Bamboo · whisk",
     priceUSD: 8,
-    image: "/img/social/bundle.jpg",
+    image: "/img/social/take-chasen-hero.png",
     placeholder: true,
   },
 ];
